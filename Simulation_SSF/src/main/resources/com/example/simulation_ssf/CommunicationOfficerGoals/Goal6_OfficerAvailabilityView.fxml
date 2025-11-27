@@ -1,14 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="CONTROLLER_NAME"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROLLER_NAME">
+    <children>
+        <Label layoutX="229.0" layoutY="14.0" style="-fx-background-color: Cyan;" text="Officer Availability List">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Label>
+        <TableView fx:id="fieldOperationTableView" layoutX="9.0" layoutY="83.0" prefHeight="200.0" prefWidth="586.0">
+            <columns>
+                <TableColumn fx:id="operativeIdTableColumn" prefWidth="83.0" text="Operative ID" />
+                <TableColumn fx:id="nameTableColumn" prefWidth="98.0" text="Name" />
+                <TableColumn fx:id="teamCaptainFlagTableColumn" prefWidth="117.0" text="Team Captain" />
+                <TableColumn fx:id="currentStatusTableColumn" prefWidth="141.0" text="In Mission" />
+            <TableColumn fx:id="currentStatusTableColumn11" prefWidth="145.0" text="Availability" />
+            </columns>
+        </TableView>
+        <ComboBox fx:id="filterOperativeStatusCB" layoutX="156.0" layoutY="46.0" prefWidth="150.0" />
+        <Button layoutX="381.0" layoutY="46.0" mnemonicParsing="false" onAction="#filterAndLoadButtonOnAction" text="Filter &amp; Load" />
+        <Button layoutX="175.0" layoutY="361.0" mnemonicParsing="false" onAction="#refreshOperationsButtonOnAction" text="Refresh" />
+        <Button layoutX="392.0" layoutY="361.0" mnemonicParsing="false" onAction="#backToDashboardButtonOnAction" text="Dashboard" />
+        <Label layoutX="14.0" layoutY="50.0" text="Filter by Operative Status:" />
+      <Label layoutX="14.0" layoutY="292.0" text="Enter Operative Id:" />
+      <TextField fx:id="operativeIdTF" layoutX="117.0" layoutY="288.0" prefHeight="25.0" prefWidth="125.0" />
+      <ComboBox fx:id="NewStatusCB" layoutX="105.0" layoutY="317.0" prefWidth="150.0" />
+      <Button layoutX="315.0" layoutY="316.0" mnemonicParsing="false" onAction="#updateStatusButtonOnAction" text="Update Status" />
+      <Label layoutX="327.0" layoutY="292.0" text="Enter Operative Name:" />
+      <Label fx:id="operativeNameLabel" layoutX="451.0" layoutY="292.0" prefHeight="17.0" prefWidth="140.0" text="Null" />
+      <Button layoutX="261.0" layoutY="288.0" mnemonicParsing="false" onAction="#showButtonOnAction" text="Show" />
+      <Label layoutX="16.0" layoutY="320.0" text="Set New Status:" />
+    </children>
 </AnchorPane>
