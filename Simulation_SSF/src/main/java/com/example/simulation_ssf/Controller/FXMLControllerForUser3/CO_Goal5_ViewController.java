@@ -1,0 +1,57 @@
+package com.example.simulation_ssf.Controller.FXMLControllerForUser3;
+
+import javafx.event.ActionEvent;
+import javafx.scene.control.Label;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
+
+public class CO_Goal5_ViewController
+{
+    @javafx.fxml.FXML
+    private TableColumn teamCaptainIdTableColumn;
+    @javafx.fxml.FXML
+    private Label logContentLabel;
+    @javafx.fxml.FXML
+    private TableColumn messageIdTableColumn;
+    @javafx.fxml.FXML
+    private TableColumn missionIdTableColumn;
+    @javafx.fxml.FXML
+    private TableColumn senderTableColumn;
+    @javafx.fxml.FXML
+    private TableColumn missionTypeTableColumn;
+    @javafx.fxml.FXML
+    private TextField messageIdTF;
+    @javafx.fxml.FXML
+    private TableColumn currentStatusTableColumn;
+    @javafx.fxml.FXML
+    private TableView logTableView;
+    @javafx.fxml.FXML
+    private TableColumn dateTableColumn;
+    @javafx.fxml.FXML
+    private Label senderNameLabel;
+
+    @javafx.fxml.FXML
+    public void initialize() {
+    }
+
+    @javafx.fxml.FXML
+    public void exportVerifiedLogsButtonOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void backToDashboardButtonOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void showLogButtonOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void markMessageAsVerifiedButtonOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void refreshIncomingMessageButtonOnAction(ActionEvent actionEvent) {
+    }
+}
