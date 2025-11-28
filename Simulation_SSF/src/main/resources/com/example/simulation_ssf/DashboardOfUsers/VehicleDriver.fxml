@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="562.0" prefWidth="761.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulation_ssf.Controller.VehicleDriverDashboardController">
+   <children>
+      <Label layoutX="249.0" layoutY="53.0" prefHeight="67.0" prefWidth="295.0" style="-fx-background-color: aqua;" text="Vehicle Driver Operations" textAlignment="CENTER">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <Button layoutX="111.0" layoutY="174.0" mnemonicParsing="false" onAction="#safeAndEfficientTransportationServiceButtonOnAction" prefHeight="51.0" prefWidth="253.0" text="Safe and Efficient Transportation Service" />
+      <Button layoutX="111.0" layoutY="240.0" mnemonicParsing="false" onAction="#vehiclePerformanceAndMaintenanceReadinessButtonOnAction" prefHeight="51.0" prefWidth="253.0" text="Vehicle Performance and Maintenance Readiness" />
+      <Button layoutX="111.0" layoutY="305.0" mnemonicParsing="false" onAction="#emergencyEvacuationAndRescueTransportButtonOnAction" prefHeight="51.0" prefWidth="253.0" text="Emergency Evacuation and Rescue Transport" />
+      <Button layoutX="111.0" layoutY="369.0" mnemonicParsing="false" onAction="#safetyAndSecurityComplianceCheckButtonOnAction" prefHeight="51.0" prefWidth="253.0" text="Safety and Security Compliance Check" />
+      <Button layoutX="396.0" layoutY="174.0" mnemonicParsing="false" onAction="#commandAndMaintenanceCoordinationButtonOnAction" prefHeight="51.0" prefWidth="253.0" text="Command and Maintenance Coordination" />
+      <Button layoutX="396.0" layoutY="240.0" mnemonicParsing="false" onAction="#fuelUsageAndLogisticalSupportButtonOnAction" prefHeight="51.0" prefWidth="253.0" text="Fuel Usage and Logistical Support" />
+      <Button layoutX="396.0" layoutY="305.0" mnemonicParsing="false" onAction="#incidentAndAccidentReportingSystemButtonOnAction" prefHeight="51.0" prefWidth="253.0" text="Incident and Accident Reporting System" />
+      <Button layoutX="396.0" layoutY="369.0" mnemonicParsing="false" onAction="#trainingAndDrivingSkillEvaluationButtonOnAction" prefHeight="51.0" prefWidth="253.0" text="Training and Driving Skill Evaluation" />
+   </children>
+</AnchorPane>

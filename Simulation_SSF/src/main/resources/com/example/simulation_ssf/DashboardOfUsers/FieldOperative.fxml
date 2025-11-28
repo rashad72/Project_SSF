@@ -5,21 +5,24 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="670.0" prefWidth="998.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulation_ssf.Controller.FieldOperativeController">
+<AnchorPane prefHeight="653.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulation_ssf.Controller.FieldOperativeDashboardController">
    <children>
-      <Label layoutX="269.0" layoutY="32.0" prefHeight="104.0" prefWidth="509.0" style="-fx-background-color: Aqua;" text="Field Operative Operations" textAlignment="CENTER" textFill="#0707076b">
+      <Label layoutX="242.0" layoutY="42.0" prefHeight="104.0" prefWidth="509.0" style="-fx-background-color: Aqua;" text="Field Operative Operations" textAlignment="CENTER" textFill="#0707076b">
          <font>
             <Font name="System Bold Italic" size="40.0" />
          </font>
       </Label>
-      <Button layoutX="395.0" layoutY="368.0" mnemonicParsing="false" text="Button" />
-      <Button layoutX="604.0" layoutY="283.0" mnemonicParsing="false" text="Button" />
-      <Button layoutX="458.0" layoutY="283.0" mnemonicParsing="false" text="Button" />
-      <Button layoutX="329.0" layoutY="283.0" mnemonicParsing="false" text="Button" />
-      <Button layoutX="329.0" layoutY="221.0" mnemonicParsing="false" text="Button" />
-      <Button layoutX="458.0" layoutY="221.0" mnemonicParsing="false" text="Button" />
-      <Button layoutX="604.0" layoutY="221.0" mnemonicParsing="false" text="Button" />
-      <Button layoutX="533.0" layoutY="368.0" mnemonicParsing="false" text="Button" />
+      <Button layoutX="85.0" layoutY="216.0" mnemonicParsing="false" onAction="#onGroundSecurityandSurveillanceButtonOnAction" prefHeight="62.0" prefWidth="244.0" text="On-Ground Security and Surveillance" />
+      <Button layoutX="85.0" layoutY="338.0" mnemonicParsing="false" onAction="#fieldIntelligenceCollectionandReportingButtonOnAction" prefHeight="62.0" prefWidth="244.0" text="Field Intelligence Collection and Reporting" />
+      <Button layoutX="344.0" layoutY="216.0" mnemonicParsing="false" onAction="#maintainAndUpdateFieldEquipmentButtonOnAction" prefHeight="62.0" prefWidth="244.0" text="Maintain and Update Field Equipment" />
+      <Button layoutX="344.0" layoutY="338.0" mnemonicParsing="false" onAction="#postOperationDebriefandReportingButtonOnAction" prefHeight="62.0" prefWidth="244.0" text="Post-Operation Debrief and Reporting" />
+      <Button layoutX="222.0" layoutY="471.0" mnemonicParsing="false" onAction="#riskAssessmentandAreaReconnaissanceButtonOnAction" prefHeight="62.0" prefWidth="244.0" text="Risk Assessment and Area Reconnaissance" />
+      <Button layoutX="603.0" layoutY="338.0" mnemonicParsing="false" onAction="#executeVIPProtectionProtocolsButtonOnAction" prefHeight="62.0" prefWidth="244.0" text="Execute VIP Protection Protocols" />
+      <Button layoutX="603.0" layoutY="216.0" mnemonicParsing="false" onAction="#emergencyResponseandCrisisHandlingButtonOnAction" prefHeight="62.0" prefWidth="244.0" text="Emergency Response and Crisis Handling" />
+      <Button layoutX="488.0" layoutY="471.0" mnemonicParsing="false" onAction="#coordinatewithCommunicationandCommandUnitsButtonOnAction" prefHeight="62.0" prefWidth="244.0" text="Coordinate with Communication and Command Units">
+         <font>
+            <Font name="System Bold" size="9.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>
