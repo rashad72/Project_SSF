@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROLLER_NAME">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulation_ssf.Controller.FXMLControllerForUser3.CO_Goal6_ViewController">
     <children>
         <Label layoutX="229.0" layoutY="14.0" style="-fx-background-color: Cyan;" text="Officer Availability List">
             <font>
