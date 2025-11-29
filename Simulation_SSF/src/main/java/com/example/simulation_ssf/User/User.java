@@ -1,7 +1,8 @@
 package com.example.simulation_ssf.User;
 
 public abstract class User {
-    protected long nID, phoneNo;
+    final protected long nID;
+    protected long phoneNo;
     protected String name, mailAddress;
 
     public User(long nID, long phoneNo, String name, String mailAddress) {
@@ -47,6 +48,11 @@ public abstract class User {
                 ", name='" + name + '\'' +
                 ", mailAddress='" + mailAddress + '\'' +
                 '}';
+    }
+    final public boolean verifyLogin(String giveNid ,String password){
+
+        return true;
+
     }
 
 
