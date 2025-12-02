@@ -1,14 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="CONTROLLER_NAME"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="760.0" prefWidth="1027.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulation_ssf.Controller.FXMLControllerForUser1.FO_Goal6_ViewController">
+   <children>
+      <Label layoutX="362.0" layoutY="64.0" text="VIP Protection Protocols">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="155.0" layoutY="160.0" text="VIP Type" />
+      <Label layoutX="629.0" layoutY="148.0" text="Team Members" />
+      <Label layoutX="119.0" layoutY="230.0" text="Assigned Route" />
+      <ComboBox fx:id="vipTypeComboBox" layoutX="212.0" layoutY="156.0" prefWidth="150.0" />
+      <TextArea fx:id="vippAssignedRouteTextField" layoutX="218.0" layoutY="219.0" prefHeight="94.0" prefWidth="319.0" />
+      <TextField fx:id="vippTeamMembers" layoutX="721.0" layoutY="144.0" />
+      <Button layoutX="462.0" layoutY="380.0" mnemonicParsing="false" onAction="#vippUpdateButtonOnAction" text="Update " />
+      <ComboBox fx:id="vippStatus" layoutX="721.0" layoutY="207.0" prefWidth="150.0" />
+      <Label layoutX="679.0" layoutY="211.0" text="Status" />
+      <TableView layoutX="262.0" layoutY="448.0" prefHeight="200.0" prefWidth="200.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="C1" />
+          <TableColumn prefWidth="75.0" text="C2" />
+        </columns>
+      </TableView>
+   </children>
 </AnchorPane>

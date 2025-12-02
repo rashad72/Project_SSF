@@ -1,14 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="CONTROLLER_NAME"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="758.0" prefWidth="865.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulation_ssf.Controller.FXMLControllerForUser1.FO_Goal2_ViewController">
+   <children>
+      <Label layoutX="236.0" layoutY="44.0" text="Field Intelligence Collection &amp; Reporting">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="149.0" layoutY="135.0" text="Threat Type" />
+      <Label layoutX="148.0" layoutY="172.0" text="Suspect Info" />
+      <TextField fx:id="fICRthreatTypeTextField" layoutX="221.0" layoutY="131.0" />
+      <TextField fx:id="fICRSuspectInfoTextField" layoutX="221.0" layoutY="168.0" />
+      <ComboBox fx:id="fICRSeverityLevelComboBox" layoutX="587.0" layoutY="131.0" prefWidth="150.0" />
+      <Label layoutX="499.0" layoutY="135.0" text="Severity Level" />
+      <TextField fx:id="fICRLocationTextField" layoutX="587.0" layoutY="172.0" prefHeight="43.0" prefWidth="193.0" />
+      <Label layoutX="512.0" layoutY="185.0" text="Location" />
+      <Label layoutX="198.0" layoutY="272.0" text="Threat Description" />
+      <TextArea fx:id="fICRThreatDescriptionTextField" layoutX="309.0" layoutY="224.0" prefHeight="113.0" prefWidth="286.0" />
+      <TableView fx:id="fICRTableView" layoutX="90.0" layoutY="420.0" prefHeight="200.0" prefWidth="709.0">
+        <columns>
+          <TableColumn prefWidth="119.0" text="Threat Type" />
+          <TableColumn prefWidth="206.0" text="Suspect Information" />
+            <TableColumn prefWidth="132.0" text="Location" />
+            <TableColumn prefWidth="99.0" text="Severity Level" />
+            <TableColumn prefWidth="152.0" text="Threat Description" />
+        </columns>
+      </TableView>
+      <Button layoutX="309.0" layoutY="347.0" mnemonicParsing="false" onAction="#fICRuploadEVandShowTableButtonOnAction" prefHeight="43.0" prefWidth="286.0" text="Upload Evidence &amp; Show in Table" />
+      <Button layoutX="637.0" layoutY="658.0" mnemonicParsing="false" onAction="#fICRSubmitButtonOnAction" prefHeight="65.0" prefWidth="161.0" text="Submit" />
+   </children>
 </AnchorPane>
