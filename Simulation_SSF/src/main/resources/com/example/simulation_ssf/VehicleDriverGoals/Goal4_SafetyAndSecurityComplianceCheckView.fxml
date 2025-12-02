@@ -1,14 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="CONTROLLER_NAME"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="799.0" prefWidth="924.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulation_ssf.Controller.FXMLControllerForUser2.VD_Goal4_ViewController">
+   <children>
+      <Label layoutX="263.0" layoutY="49.0" text="Safety &amp; Security Compliance Check">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="140.0" layoutY="142.0" text="Checklist Item" />
+      <Button layoutX="258.0" layoutY="375.0" mnemonicParsing="false" onAction="#ssccSubmitButtonOnAction" text="Submit" />
+      <ComboBox fx:id="ssccCheckListItemsComboBox" layoutX="225.0" layoutY="138.0" prefWidth="150.0" />
+      <Label layoutX="178.0" layoutY="177.0" text="Status" />
+      <ComboBox fx:id="ssccStatusComboBox" layoutX="224.0" layoutY="173.0" prefWidth="150.0" />
+      <Label layoutX="178.0" layoutY="212.0" text="Notes" />
+      <TextArea fx:id="ssccNotesTextArea" layoutX="225.0" layoutY="212.0" prefHeight="105.0" prefWidth="246.0" />
+      <DatePicker fx:id="ssccCheckingDatePicker" layoutX="225.0" layoutY="327.0" />
+      <Label layoutX="139.0" layoutY="331.0" text="Checking Date" />
+      <TableView fx:id="ssccTableView" layoutX="135.0" layoutY="453.0" prefHeight="200.0" prefWidth="672.0">
+        <columns>
+          <TableColumn prefWidth="176.0" text="Checklist Item" />
+          <TableColumn prefWidth="101.0" text="Status" />
+            <TableColumn prefWidth="126.0" text="Checking Date" />
+            <TableColumn prefWidth="268.0" text="Notes" />
+        </columns>
+      </TableView>
+   </children>
 </AnchorPane>

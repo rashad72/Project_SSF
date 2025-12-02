@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="769.0" prefWidth="959.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulation_ssf.Controller.FXMLControllerForUser2.VD_Goal8_ViewController">
+   <children>
+      <Label layoutX="310.0" layoutY="60.0" text="Daily Vehicle Usage Summary">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <TextField fx:id="dvusVehicleIdTextField" layoutX="254.0" layoutY="113.0" />
+      <TextField fx:id="dvusStartTimeTextField" layoutX="254.0" layoutY="149.0" />
+      <Label layoutX="191.0" layoutY="117.0" text="Vehicle ID" />
+      <Label layoutX="191.0" layoutY="153.0" text="Start Time" />
+      <TextField fx:id="dvusEndTimeTextField" layoutX="254.0" layoutY="182.0" />
+      <Label layoutX="195.0" layoutY="186.0" text="End Time" />
+      <TextField fx:id="dvusOdometerStartTextField" layoutX="545.0" layoutY="149.0" />
+      <Label layoutX="456.0" layoutY="153.0" text="Odometer Start" />
+      <TextField fx:id="dvusOdometerEndTextField" layoutX="545.0" layoutY="182.0" />
+      <Label layoutX="459.0" layoutY="186.0" text="Odometer End" />
+      <DatePicker fx:id="dvusDatePicker" layoutX="545.0" layoutY="113.0" />
+      <Label layoutX="498.0" layoutY="117.0" text="Date" />
+      <TextArea layoutX="257.0" layoutY="221.0" prefHeight="97.0" prefWidth="446.0" />
+      <Label layoutX="176.0" layoutY="261.0" text="Travel Purpose" />
+      <TableView fx:id="dvusTableView" layoutX="87.0" layoutY="521.0" prefHeight="200.0" prefWidth="787.0">
+        <columns>
+          <TableColumn prefWidth="149.0" text="Vehicle ID" />
+          <TableColumn prefWidth="138.0" text="Date" />
+            <TableColumn prefWidth="108.0" text="Distance" />
+            <TableColumn prefWidth="138.0" text="Total Time" />
+            <TableColumn prefWidth="253.0" text="Travels Purpose" />
+        </columns>
+      </TableView>
+      <Button layoutX="310.0" layoutY="459.0" mnemonicParsing="false" onAction="#dvusAddInTableButtonOnAction" prefHeight="38.0" prefWidth="354.0" text="Add In Table" />
+      <Button layoutX="358.0" layoutY="372.0" mnemonicParsing="false" onAction="#dvusTotalDistanceButtonOnAction" text="Total Distance" />
+      <Button layoutX="523.0" layoutY="372.0" mnemonicParsing="false" onAction="#dvusTotalTimeButtonOnAction" text="Total Time" />
+   </children>
+</AnchorPane>
