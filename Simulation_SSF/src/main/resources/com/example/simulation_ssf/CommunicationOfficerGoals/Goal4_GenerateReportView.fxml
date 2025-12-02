@@ -33,6 +33,6 @@
         <Label layoutX="351.0" layoutY="60.0" text="To:" />
         <Label layoutX="58.0" layoutY="98.0" text="Report type:" />
       <Button layoutX="256.0" layoutY="295.0" mnemonicParsing="false" onAction="#exportButtonOnAction" text="Export as PDF" />
-      <Label fx:id="exportStatusLabel" layoutX="180.0" layoutY="330.0" prefHeight="17.0" prefWidth="213.0" />
+      <Label fx:id="exportStatusLabel" layoutX="180.0" layoutY="330.0" prefHeight="17.0" prefWidth="213.0" style="-fx-background-color: yellow;" />
     </children>
 </AnchorPane>

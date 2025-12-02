@@ -18,7 +18,7 @@
            <columns>
                <TableColumn fx:id="missionIdTableColumn" prefWidth="66.0" text="Mission ID" />
                <TableColumn fx:id="missionNameTableColumn" prefWidth="95.0" text="Mission Name" />
-               <TableColumn fx:id="objectiveTableColumn" prefWidth="64.0" text="Objective" />
+               <TableColumn fx:id="missionTypeTableColumn" prefWidth="64.0" text="Type" />
                <TableColumn fx:id="addressTableColumn" prefWidth="82.0" text="Address" />
                <TableColumn fx:id="assignDateTableColumn" prefWidth="74.0" text="Assign Date" />
                <TableColumn fx:id="teamCaptainIdTableColumn" prefWidth="100.0" text="Team Captain Id" />
@@ -34,8 +34,6 @@
        <Label layoutX="428.0" layoutY="44.0" text="Filter by Mission Status:" />
        <TextField fx:id="filterAddressTF" layoutX="228.0" layoutY="68.0" />
        <Label layoutX="258.0" layoutY="43.0" text="Filter by Address:" />
-      <ComboBox fx:id="receiverTypeCB" layoutX="408.0" layoutY="326.0" prefWidth="150.0" />
-      <Label layoutX="293.0" layoutY="329.0" text="Message sending To:" />
       <TextField fx:id="messageTF" layoutX="92.0" layoutY="362.0" prefHeight="25.0" prefWidth="348.0" />
       <Label layoutX="34.0" layoutY="365.0" text="Message :" />
       <Button layoutX="467.0" layoutY="363.0" mnemonicParsing="false" onAction="#sendMessageButtonOnAction" text="Send Message" />

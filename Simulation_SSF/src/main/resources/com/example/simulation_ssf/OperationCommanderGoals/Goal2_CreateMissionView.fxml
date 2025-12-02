@@ -21,8 +21,7 @@
         <Button layoutX="256.0" layoutY="361.0" mnemonicParsing="false" onAction="#backToDashboardButtonOnAction" text="Dashboard" />
         <Label layoutX="27.0" layoutY="154.0" text="Assign Date:" />
         <Label layoutX="312.0" layoutY="154.0" text="Mission Type:" />
-        <Button layoutX="249.0" layoutY="294.0" mnemonicParsing="false" onAction="#exportAsPDFButtonOnAction" text="Export as PDF" />
-        <Label fx:id="messageLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="46.0" layoutY="236.0" prefHeight="34.0" prefWidth="491.0" style="-fx-background-color: yellow;" text="Fill All the Fields" />
+        <Label fx:id="messageLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="46.0" layoutY="236.0" prefHeight="96.0" prefWidth="497.0" style="-fx-background-color: yellow;" text="Fill All the Fields" textAlignment="JUSTIFY" wrapText="true" />
       <Label layoutX="29.0" layoutY="52.0" text="Mission Id:" />
       <TextField fx:id="missionIdTF" layoutX="95.0" layoutY="48.0" />
       <Label layoutX="309.0" layoutY="52.0" text="Mission Name:" />

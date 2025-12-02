@@ -30,7 +30,7 @@ public class OC_Goal2_ViewController
     public void confirmButtonOnAction(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void exportAsPDFButtonOnAction(ActionEvent actionEvent) {
     }
 

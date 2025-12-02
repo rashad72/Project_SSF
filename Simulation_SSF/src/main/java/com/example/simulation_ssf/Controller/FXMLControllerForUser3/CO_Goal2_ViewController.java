@@ -10,8 +10,6 @@ public class CO_Goal2_ViewController
     @javafx.fxml.FXML
     private TextField filterAddressTF;
     @javafx.fxml.FXML
-    private TableColumn objectiveTableColumn;
-    @javafx.fxml.FXML
     private TableColumn missionNameTableColumn;
     @javafx.fxml.FXML
     private TableView fieldOperationTableView;
@@ -28,11 +26,11 @@ public class CO_Goal2_ViewController
     @javafx.fxml.FXML
     private DatePicker filterDatePicker;
     @javafx.fxml.FXML
-    private ComboBox receiverTypeCB;
-    @javafx.fxml.FXML
     private TableColumn currentStatusTableColumn;
     @javafx.fxml.FXML
     private TableColumn assignDateTableColumn;
+    @javafx.fxml.FXML
+    private TableColumn missionTypeTableColumn;
 
     @javafx.fxml.FXML
     public void initialize() {
