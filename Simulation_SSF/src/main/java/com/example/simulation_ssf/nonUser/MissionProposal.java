@@ -1,23 +1,28 @@
 package com.example.simulation_ssf.nonUser;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class MissionProposal {
+public class MissionProposal implements Serializable {
     private final int proposalId;
     private String description;
-    private String location;
-    private String missionType;
+    private String address  ;
+    private String missionType;        // "Rescue", "Surveillance" "Protection"
     private String situationStatus;
+    private String decisionStatus ="Pending" ; // "Pending", "Approved", "Rejected"
     private LocalDate proposalDate;
+    private String comment;
     private LocalDate assignDate;
 
-    public MissionProposal(int proposalId, String description, String location, String missionType, String situationStatus, LocalDate proposalDate, LocalDate assignDate) {
+    public MissionProposal(int proposalId, String description, String address, String missionType, String situationStatus, String decisionStatus, LocalDate proposalDate, String comment, LocalDate assignDate) {
         this.proposalId = proposalId;
         this.description = description;
-        this.location = location;
+        this.address = address;
         this.missionType = missionType;
         this.situationStatus = situationStatus;
+        this.decisionStatus = decisionStatus;
         this.proposalDate = proposalDate;
+        this.comment = comment;
         this.assignDate = assignDate;
     }
 
@@ -29,8 +34,8 @@ public class MissionProposal {
         return description;
     }
 
-    public String getLocation() {
-        return location;
+    public String getAddress() {
+        return address;
     }
 
     public String getMissionType() {
@@ -41,8 +46,16 @@ public class MissionProposal {
         return situationStatus;
     }
 
+    public String getDecisionStatus() {
+        return decisionStatus;
+    }
+
     public LocalDate getProposalDate() {
         return proposalDate;
+    }
+
+    public String getComment() {
+        return comment;
     }
 
     public LocalDate getAssignDate() {
@@ -53,28 +66,27 @@ public class MissionProposal {
         this.description = description;
     }
 
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
     public void setSituationStatus(String situationStatus) {
         this.situationStatus = situationStatus;
+    }
+
+    public void setDecisionStatus(String decisionStatus) {
+        this.decisionStatus = decisionStatus;
+    }
+
+    public void setComment(String comment) {
+        this.comment = comment;
     }
 
     public void setAssignDate(LocalDate assignDate) {
         this.assignDate = assignDate;
     }
 
-    public void setLocation(String location) {
-        this.location = location;
-    }
-
-    @Override
-    public String toString() {
-        return "MissionProposal{" +
-                "proposalId=" + proposalId +
-                ", description='" + description + '\'' +
-                ", location='" + location + '\'' +
-                ", missionType='" + missionType + '\'' +
-                ", situationStatus='" + situationStatus + '\'' +
-                ", proposalDate=" + proposalDate +
-                ", assignDate=" + assignDate +
-                '}';
+    public void setProposalDate(LocalDate proposalDate) {
+        this.proposalDate = proposalDate;
     }
 }

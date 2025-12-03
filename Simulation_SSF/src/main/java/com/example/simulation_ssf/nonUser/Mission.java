@@ -1,27 +1,35 @@
 package com.example.simulation_ssf.nonUser;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class Mission {
+public class Mission implements Serializable {
     private final int missionId;
-    private String missionName;
-    private String missionType;
-    private LocalDate assignDate;
-    private int teamCaptainId;
+    private final String missionName;
+    private String Objective;
+    private final String missionType;     // "Rescue", "Surveillance" "Protection"
+    private String status;          // "Ongoing", "Completed", "Cancelled", "Postponed"
+    private final LocalDate assignDate;
+    private int assignTeamId; //when team is assigned team status will change
+    private String description;
+    private long teamCaptainId;
     private String address;
-    private String status;
-    private Team backupTeam;
+    private boolean hasBackup = false;
+    private LocalDate completionDate;
 
-    public Mission(int missionId, String missionName, String missionType, LocalDate assignDate, int teamCaptainId, String address, String status, Team backupTeam) {
+    public Mission(int missionId, String missionName, String missionType, LocalDate assignDate, String objective, String status, int assignTeamId, String description, long teamCaptainId, String address, boolean hasBackup, LocalDate completionDate) {
         this.missionId = missionId;
         this.missionName = missionName;
         this.missionType = missionType;
         this.assignDate = assignDate;
+        Objective = objective;
+        this.status = status;
+        this.assignTeamId = assignTeamId;
+        this.description = description;
         this.teamCaptainId = teamCaptainId;
         this.address = address;
-        this.status = status;
-        this.backupTeam = backupTeam;
-
+        this.hasBackup = false;
+        this.completionDate = completionDate;
     }
 
     public int getMissionId() {
@@ -32,15 +40,31 @@ public class Mission {
         return missionName;
     }
 
+    public String getObjective() {
+        return Objective;
+    }
+
     public String getMissionType() {
         return missionType;
+    }
+
+    public String getStatus() {
+        return status;
     }
 
     public LocalDate getAssignDate() {
         return assignDate;
     }
 
-    public int getTeamCaptainId() {
+    public int getAssignTeamId() {
+        return assignTeamId;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public long getTeamCaptainId() {
         return teamCaptainId;
     }
 
@@ -48,23 +72,31 @@ public class Mission {
         return address;
     }
 
-    public String getStatus() {
-        return status;
+    public boolean isHasBackup() {
+        return hasBackup;
     }
 
-    public Team getBackupTeam() {
-        return backupTeam;
+    public LocalDate getCompletionDate() {
+        return completionDate;
     }
 
-    public void setMissionName(String missionName) {
-        this.missionName = missionName;
+    public void setObjective(String objective) {
+        Objective = objective;
     }
 
-    public void setMissionType(String missionType) {
-        this.missionType = missionType;
+    public void setStatus(String status) {
+        this.status = status;
     }
 
-    public void setTeamCaptainId(int teamCaptainId) {
+    public void setAssignTeamId(int assignTeamId) {
+        this.assignTeamId = assignTeamId;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public void setTeamCaptainId(long teamCaptainId) {
         this.teamCaptainId = teamCaptainId;
     }
 
@@ -72,12 +104,12 @@ public class Mission {
         this.address = address;
     }
 
-    public void setStatus(String status) {
-        this.status = status;
+    public void setHasBackup(boolean hasBackup) {
+        this.hasBackup = hasBackup;
     }
 
-    public void setBackupTeam(Team backupTeam) {
-        this.backupTeam = backupTeam;
+    public void setCompletionDate(LocalDate completionDate) {
+        this.completionDate = completionDate;
     }
 
     @Override
@@ -85,12 +117,16 @@ public class Mission {
         return "Mission{" +
                 "missionId=" + missionId +
                 ", missionName='" + missionName + '\'' +
+                ", Objective='" + Objective + '\'' +
                 ", missionType='" + missionType + '\'' +
+                ", status='" + status + '\'' +
                 ", assignDate=" + assignDate +
+                ", assignTeamId=" + assignTeamId +
+                ", description='" + description + '\'' +
                 ", teamCaptainId=" + teamCaptainId +
                 ", address='" + address + '\'' +
-                ", status='" + status + '\'' +
-                ", backupTeam=" + backupTeam +
+                ", hasBackup=" + hasBackup +
+                ", completionDate=" + completionDate +
                 '}';
     }
 }

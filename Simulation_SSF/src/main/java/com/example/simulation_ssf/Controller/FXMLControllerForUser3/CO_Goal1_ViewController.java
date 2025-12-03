@@ -3,6 +3,8 @@ package com.example.simulation_ssf.Controller.FXMLControllerForUser3;
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
 
+import java.util.ArrayList;
+
 public class CO_Goal1_ViewController
 {
     @javafx.fxml.FXML
