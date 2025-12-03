@@ -24,5 +24,24 @@ public class loginViewController
 
     @javafx.fxml.FXML
     public void signInButtonOnAction(ActionEvent actionEvent) {
+        String loginUserType = loginUserTypeComboBox.getValue();
+        if (loginUserType.equals("Field Operative")){
+            //fxml Load
+        }
+        if (loginUserType.equals("Vehicle Driver")){
+            //fxml Load
+        }
+        if (loginUserType.equals("Communication Officer")){
+            //fxml Load
+        }
+        if (loginUserType.equals("Operation Commander")){
+            //fxml Load
+        }
+        if (loginUserType.equals("Equipment Manager")){
+            //fxml Load
+        }
+        if (loginUserType.equals("Intelligence Analyst")){
+            //fxml Load
+        }
     }
 }
