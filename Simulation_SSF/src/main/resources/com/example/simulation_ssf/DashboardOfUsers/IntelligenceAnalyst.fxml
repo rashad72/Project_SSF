@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulation_ssf.Controller.IntelligenceAnalystDashboardController">
+    <children>
+        <Label layoutX="205.0" layoutY="14.0" prefHeight="35.0" prefWidth="190.0" style="-fx-background-color: cyan;" text="Intelligence Analyst Dashboard" />
+        <Button layoutX="34.0" layoutY="74.0" mnemonicParsing="false" onAction="#ThreatReportsButtonOnAction" text="Threat Reports" />
+        <Button layoutX="226.0" layoutY="74.0" mnemonicParsing="false" onAction="#CreateSummaryButtonOnAction" prefHeight="25.0" prefWidth="133.0" text="Create Summary" />
+        <Button layoutX="34.0" layoutY="176.0" mnemonicParsing="false" onAction="#SummarizeReportButtonOnAction" prefHeight="25.0" prefWidth="149.0" text="Summarize Report" />
+        <Button layoutX="425.0" layoutY="74.0" mnemonicParsing="false" onAction="#FieldReportsButtonOnAction" prefHeight="25.0" prefWidth="133.0" text="Field Reports" />
+        <Button layoutX="226.0" layoutY="176.0" mnemonicParsing="false" onAction="#SuspiciousActivitiesButtonOnAction" prefHeight="25.0" prefWidth="149.0" text="Suspicious Activities" />
+        <Button layoutX="21.0" layoutY="262.0" mnemonicParsing="false" onAction="#IntelligenceFileToShareButtonOnAction" prefHeight="25.0" prefWidth="176.0" text="Intelligence File To Share" />
+        <Button layoutX="409.0" layoutY="176.0" mnemonicParsing="false" onAction="#EditOrUpdateButtonOnAction" prefHeight="25.0" prefWidth="149.0" text="Edit or Update" />
+        <Button layoutX="226.0" layoutY="262.0" mnemonicParsing="false" onAction="#OperationAnalyticsButtonOnAction" prefHeight="25.0" prefWidth="176.0" text="Operation Analytics" />
+        <Button layoutX="425.0" layoutY="262.0" mnemonicParsing="false" onAction="#logoutButtonOnAction" prefHeight="25.0" prefWidth="149.0" text="Logout" />
+    </children>
+</AnchorPane>
