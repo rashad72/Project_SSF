@@ -76,9 +76,7 @@ public class Mission {
         this.status = status;
     }
 
-    public void setBackupTeam(Team backupTeam) {
-        this.backupTeam = backupTeam;
-    }
+    public void setBackupTeam(Team backupTeam) {this.backupTeam = backupTeam;}
 
     @Override
     public String toString() {

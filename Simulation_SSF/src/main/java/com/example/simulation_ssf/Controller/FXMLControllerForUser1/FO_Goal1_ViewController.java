@@ -22,4 +22,8 @@ public class FO_Goal1_ViewController
     @javafx.fxml.FXML
     public void oGSSPSubmitReportButtonOnAction(ActionEvent actionEvent) {
     }
+
+    @javafx.fxml.FXML
+    public void oGSSPStartPatrolButtonOnAction(ActionEvent actionEvent) {
+    }
 }
