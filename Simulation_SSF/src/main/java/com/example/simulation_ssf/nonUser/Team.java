@@ -23,4 +23,69 @@ public class Team implements Serializable {
         this.inMission = inMission;
         this.teamStatus = teamStatus;
     }
+
+    public int getTeamId() {
+        return teamId;
+    }
+
+    public String getTeamName() {
+        return teamName;
+    }
+
+    public long getCaptainId() {
+        return captainId;
+    }
+
+    public ArrayList<Long> getMemberIds() {
+        return memberIds;
+    }
+
+    public LocalDate getValidUntil() {
+        return validUntil;
+    }
+
+    public boolean isInMission() {
+        return inMission;
+    }
+
+    public String getTeamStatus() {
+        return teamStatus;
+    }
+
+    public void setTeamName(String teamName) {
+        this.teamName = teamName;
+    }
+
+    public void setCaptainId(long captainId) {
+        this.captainId = captainId;
+    }
+
+    public void setMemberIds(ArrayList<Long> memberIds) {
+        this.memberIds = memberIds;
+    }
+
+    public void setValidUntil(LocalDate validUntil) {
+        this.validUntil = validUntil;
+    }
+
+    public void setInMission(boolean inMission) {
+        this.inMission = inMission;
+    }
+
+    public void setTeamStatus(String teamStatus) {
+        this.teamStatus = teamStatus;
+    }
+
+    @Override
+    public String toString() {
+        return "Team{" +
+                "teamId=" + teamId +
+                ", teamName='" + teamName + '\'' +
+                ", captainId=" + captainId +
+                ", memberIds=" + memberIds +
+                ", validUntil=" + validUntil +
+                ", inMission=" + inMission +
+                ", teamStatus='" + teamStatus + '\'' +
+                '}';
+    }
 }

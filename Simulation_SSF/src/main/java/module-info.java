@@ -1,11 +1,7 @@
 module com.example.simulation_ssf {
     requires javafx.controls;
     requires javafx.fxml;
-//    requires com.example.simulation_ssf;
     requires javafx.graphics;
-  //  requires com.example.simulation_ssf;
-    //   requires com.example.simulation_ssf;
-    // requires com.example.simulation_ssf;
 
 
     opens com.example.simulation_ssf to javafx.fxml;
