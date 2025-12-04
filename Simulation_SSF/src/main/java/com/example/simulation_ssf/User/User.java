@@ -49,7 +49,9 @@ public abstract class User {
                 ", mailAddress='" + mailAddress + '\'' +
                 '}';
     }
-    final public boolean verifyLogin(String giveNid ,String password){
+    final public boolean verifyLogin(String userType, String employeeId ,String password){
+
+
 
         return true;
 

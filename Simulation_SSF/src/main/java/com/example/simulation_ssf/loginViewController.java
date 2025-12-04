@@ -1,10 +1,14 @@
 package com.example.simulation_ssf;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Scene;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
 public class loginViewController
 {
@@ -24,5 +28,48 @@ public class loginViewController
 
     @javafx.fxml.FXML
     public void signInButtonOnAction(ActionEvent actionEvent) {
+        String loginUserType = loginUserTypeComboBox.getValue();
+        if (loginUserType.equals("Field Operative")){
+            //fxml Load
+        }
+        if (loginUserType.equals("Vehicle Driver")){
+            //fxml Load
+        }
+        if (loginUserType.equals("Communication Officer")){
+            try {
+                FXMLLoader fxmlLoader = new FXMLLoader(SSFApplication.class.getResource("/com/example/simulation_ssf/DashboardOfUsers/CommunicationOfficerDashboard.fxml"));
+                Scene dashboardScene = new Scene(fxmlLoader.load());
+                Stage currentStage =(Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+//            Stage currentStage = (Stage) dashboardButton.getScene().getWindow();
+                currentStage.setScene(dashboardScene);
+                currentStage.show();
+
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+            }
+
+
+            //fxml Load
+        }
+        if (loginUserType.equals("Operation Commander")){
+            try {
+                FXMLLoader fxmlLoader = new FXMLLoader(SSFApplication.class.getResource("/com/example/simulation_ssf/DashboardOfUsers/OperationCommanderDashboard.fxml"));
+                Scene dashboardScene = new Scene(fxmlLoader.load());
+                Stage currentStage =(Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+//            Stage currentStage = (Stage) dashboardButton.getScene().getWindow();
+                currentStage.setScene(dashboardScene);
+                currentStage.show();
+
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+            }
+            //fxml Load
+        }
+        if (loginUserType.equals("Equipment Manager")){
+            //fxml Load
+        }
+        if (loginUserType.equals("Intelligence Analyst")){
+            //fxml Load
+        }
     }
 }
