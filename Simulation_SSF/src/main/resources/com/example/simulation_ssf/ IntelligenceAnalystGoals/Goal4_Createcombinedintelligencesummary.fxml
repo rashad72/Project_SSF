@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="436.0" prefWidth="660.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulation_ssf.Controller.FXMLControllerForUser6.IA_Goal4_Controller">
+   <children>
+      <Button layoutX="275.0" layoutY="176.0" mnemonicParsing="false" onAction="#summariseButtonOnAction" prefHeight="28.0" prefWidth="86.0" text="Summarise" />
+      <TableView fx:id="createCombinedTV" layoutX="14.0" layoutY="229.0" prefHeight="200.0" prefWidth="639.0">
+        <columns>
+          <TableColumn fx:id="operationIDTC" prefWidth="75.0" text="OperationID" />
+          <TableColumn fx:id="operationNameTC" prefWidth="109.99999237060547" text="OperationName " />
+            <TableColumn fx:id="regionTC" prefWidth="63.33329772949219" text="Region " />
+            <TableColumn fx:id="teamLeaderTC" prefWidth="85.33331298828125" text="Team Leader " />
+            <TableColumn fx:id="operationTypeTC" prefWidth="105.33331298828125" text="Operation Type " />
+            <TableColumn fx:id="priorityTC" prefWidth="55.999969482421875" text="Priority" />
+            <TableColumn fx:id="startDateTC" prefWidth="65.33331298828125" text="Start Date " />
+            <TableColumn fx:id="statusTC" prefWidth="78.0" text="status " />
+        </columns>
+      </TableView>
+      <Label layoutX="230.0" layoutY="14.0" prefHeight="35.0" prefWidth="217.0" style="-fx-background-color: cyan;" text="Create combined intelligence summary" />
+      <Label layoutX="37.0" layoutY="101.0" prefHeight="17.0" prefWidth="51.0" text="Priority " />
+      <Label layoutX="30.0" layoutY="144.0" text="Operation Type" />
+      <Label layoutX="45.0" layoutY="177.0" prefHeight="28.0" prefWidth="51.0" text="Region " />
+      <ComboBox fx:id="priorityCB" layoutX="125.0" layoutY="97.0" prefWidth="150.0" />
+      <ComboBox fx:id="operationCB" layoutX="125.0" layoutY="140.0" prefWidth="150.0" />
+      <ComboBox fx:id="regionCB" layoutX="113.0" layoutY="178.0" prefWidth="150.0" />
+      <Label layoutX="45.0" layoutY="57.0" text="Operation ID" />
+      <TextField fx:id="operationIDTF" layoutX="125.0" layoutY="53.0" />
+      <DatePicker fx:id="fromDP" layoutX="441.0" layoutY="62.0" />
+      <DatePicker fx:id="toDP" layoutX="441.0" layoutY="109.0" />
+      <Label layoutX="339.0" layoutY="69.0" text="From" />
+      <Label layoutX="349.0" layoutY="113.0" prefHeight="17.0" prefWidth="36.0" text="TO" />
+   </children>
+</AnchorPane>
