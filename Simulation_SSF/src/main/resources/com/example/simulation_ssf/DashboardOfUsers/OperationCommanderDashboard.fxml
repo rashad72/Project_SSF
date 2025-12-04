@@ -10,8 +10,8 @@
         <Button layoutX="41.0" layoutY="74.0" mnemonicParsing="false" onAction="#viewOngoingMissionsButtonOnAction" text="View Ongoing Missions" />
         <Button layoutX="226.0" layoutY="74.0" mnemonicParsing="false" onAction="#createNewMissionButtonOnAction" prefHeight="25.0" prefWidth="149.0" text="Create New Mission" />
         <Button layoutX="41.0" layoutY="176.0" mnemonicParsing="false" onAction="#missionProposalsButtonOnAction" prefHeight="25.0" prefWidth="141.0" text="Mission Proposals" />
-        <Button layoutX="409.0" layoutY="74.0" mnemonicParsing="false" onAction="#reassignTeamCaptainButtonOnAction" prefHeight="25.0" prefWidth="149.0" text="Reassign Team Captain" />
-        <Button layoutX="226.0" layoutY="176.0" mnemonicParsing="false" onAction="#missionStatusUpdateButtonOnAction" prefHeight="25.0" prefWidth="149.0" text="Mission Status Update" />
+        <Button layoutX="409.0" layoutY="74.0" mnemonicParsing="false" onAction="#assignTeamButtonOnAction" prefHeight="25.0" prefWidth="149.0" text="Assign Team" />
+        <Button layoutX="208.0" layoutY="176.0" mnemonicParsing="false" onAction="#markMissionCompletedButtonOnAction" prefHeight="25.0" prefWidth="176.0" text="Mark Mission As Completed" />
         <Button layoutX="30.0" layoutY="262.0" mnemonicParsing="false" onAction="#reopenCompletedMissionButtonOnAction" prefHeight="25.0" prefWidth="163.0" text="Reopen Completed Mission" />
         <Button layoutX="395.0" layoutY="176.0" mnemonicParsing="false" onAction="#cancelOrPostponeMissionButtonOnAction" prefHeight="25.0" prefWidth="163.0" text="Cancel or Postpone Mission" />
         <Button layoutX="226.0" layoutY="262.0" mnemonicParsing="false" onAction="#assignBackupTeamButtonOnAction" prefHeight="25.0" prefWidth="149.0" text="Assign Backup Team" />
