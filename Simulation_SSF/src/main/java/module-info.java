@@ -2,6 +2,10 @@ module com.example.simulation_ssf {
     requires javafx.controls;
     requires javafx.fxml;
     requires javafx.graphics;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 18f6109c5811d2de53900a6f93dae978ba4427a3
 
 
     opens com.example.simulation_ssf to javafx.fxml;
