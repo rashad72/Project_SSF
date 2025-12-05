@@ -1,46 +1,64 @@
 package com.example.simulation_ssf.Controller.FXMLControllerForUser3;
 
 import com.example.simulation_ssf.SSFApplication;
+import com.example.simulation_ssf.nonUser.Mission;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class CO_Goal1_ViewController
 {
     @javafx.fxml.FXML
-    private TableColumn teamCaptainIdTableColumn;
-    @javafx.fxml.FXML
     private TextField filterAddressTF;
     @javafx.fxml.FXML
-    private TableColumn objectiveTableColumn;
+    private TableColumn<Mission, String> objectiveTableColumn;
     @javafx.fxml.FXML
-    private TableColumn missionNameTableColumn;
+    private TableColumn<Mission, String> missionNameTableColumn;
     @javafx.fxml.FXML
-    private TableView fieldOperationTableView;
+    private TableView<Mission> fieldOperationTableView;
     @javafx.fxml.FXML
-    private ComboBox filterMissionStatusCB;
+    private ComboBox<String> filterMissionStatusCB;
     @javafx.fxml.FXML
     private DatePicker filterFromDatePicker;
     @javafx.fxml.FXML
-    private TableColumn missionIdTableColumn;
+    private TableColumn<Mission, Integer> missionIdTableColumn;
     @javafx.fxml.FXML
-    private TableColumn addressTableColumn;
+    private TableColumn<Mission, String> addressTableColumn;
     @javafx.fxml.FXML
     private TextField filterMissionIdTF;
     @javafx.fxml.FXML
     private DatePicker filterToDatePicker;
     @javafx.fxml.FXML
-    private TableColumn currentStatusTableColumn;
+    private TableColumn<Mission, String> currentStatusTableColumn;
     @javafx.fxml.FXML
-    private TableColumn assignDateTableColumn;
+    private TableColumn<Mission, LocalDate> assignDateTableColumn;
+    @javafx.fxml.FXML
+    private TableColumn<Mission, Integer> assignTeamIdTableColumn;
+    private ArrayList<Mission> missionArrayList = new ArrayList<>();
 
     @javafx.fxml.FXML
     public void initialize() {
+        filterMissionStatusCB.getItems().addAll("Rescue", "Surveillance", "Protection");
+        //(int missionId, String missionName, String missionType, LocalDate assignDate,
+        // String objective, String status, int assignTeamId, String description, long teamCaptainId,
+        // String address, boolean hasBackup, LocalDate completionDate)
+        assignTeamIdTableColumn.setCellValueFactory(new PropertyValueFactory<>("assignTeamId"));
+        assignDateTableColumn.setCellValueFactory(new PropertyValueFactory<>("assignDate"));
+        currentStatusTableColumn.setCellValueFactory(new PropertyValueFactory<>("status"));
+        addressTableColumn.setCellValueFactory(new PropertyValueFactory<>("address"));
+        missionIdTableColumn.setCellValueFactory(new PropertyValueFactory<>("missionId"));
+        missionNameTableColumn.setCellValueFactory(new PropertyValueFactory<>("missionName"));
+        objectiveTableColumn.setCellValueFactory(new PropertyValueFactory<>("objective"));
+
+
+
     }
 
     @javafx.fxml.FXML

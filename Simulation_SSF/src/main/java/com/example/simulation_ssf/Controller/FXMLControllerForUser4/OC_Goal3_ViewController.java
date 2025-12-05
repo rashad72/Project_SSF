@@ -1,12 +1,16 @@
 package com.example.simulation_ssf.Controller.FXMLControllerForUser4;
 
 import com.example.simulation_ssf.SSFApplication;
+import com.example.simulation_ssf.nonUser.Team;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
+
+import java.time.LocalDate;
+import java.util.ArrayList;
 
 public class OC_Goal3_ViewController
 {
@@ -30,6 +34,7 @@ public class OC_Goal3_ViewController
     private TextField operative4IdTF;
     @javafx.fxml.FXML
     private TextField operative3IdTF;
+    private ArrayList<Team> teamList = new ArrayList<>();
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -52,5 +57,59 @@ public class OC_Goal3_ViewController
 
     @javafx.fxml.FXML
     public void assignTeamButtonOnAction(ActionEvent actionEvent) {
+        if (teamIdTF.getText().isEmpty() || teamNameTF.getText().isEmpty() || teamCaptainIdTF.getText().isEmpty() ||
+                validUntilDatePicker.getValue() == null || operative1IdTF.getText().isEmpty()  || operative2IdTF.getText().isEmpty()
+                || operative3IdTF.getText().isEmpty() || operative4IdTF.getText().isEmpty() ||operative5IdTF.getText().isEmpty() )
+        {
+            messageLabel.setText("All fields must be filled.");
+            System.out.println("validation 1 done.");
+            return;
+        }
+        //validation 3 need to be done..
+
+        if (validUntilDatePicker.getValue().isBefore(LocalDate.now())){
+            messageLabel.setText("Valid date cannot be in the past");
+            System.out.println("validation 3 done.");
+            return;
+        }
+        for (Team t : teamList){
+            long tCaptain = t.getCaptainId();
+            if (tCaptain == Long.parseLong(teamCaptainIdTF.getText())){
+                messageLabel.setText("Team captain is already assigned in another team. ");
+                System.out.println("validation 4 done.");
+                return;
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+        ArrayList<Long> memberList = new ArrayList<>();
+        memberList.add(Long.parseLong(operative1IdTF.getText()));
+        memberList.add(Long.parseLong(operative2IdTF.getText()));
+        memberList.add(Long.parseLong(operative3IdTF.getText()));
+        memberList.add(Long.parseLong(operative4IdTF.getText()));
+        memberList.add(Long.parseLong(operative5IdTF.getText()));
+
+        Team t = new Team(Integer.parseInt(teamIdTF.getText()),
+                teamNameTF.getText(),
+                Long.parseLong(teamCaptainIdTF.getText()),
+                memberList,
+                validUntilDatePicker.getValue(),
+                false,
+                "Available"
+                );
+        teamList.add(t);
+        System.out.println(t);
+        messageLabel.setText("Team created" + t);
+
     }
+
 }

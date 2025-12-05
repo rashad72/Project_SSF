@@ -12,12 +12,11 @@ public class Mission implements Serializable {
     private final LocalDate assignDate;
     private int assignTeamId; //when team is assigned team status will change
     private String description;
-    private long teamCaptainId;
     private String address;
     private boolean hasBackup = false;
     private LocalDate completionDate;
 
-    public Mission(int missionId, String missionName, String missionType, LocalDate assignDate, String objective, String status, int assignTeamId, String description, long teamCaptainId, String address, boolean hasBackup, LocalDate completionDate) {
+    public Mission(int missionId, String missionName, String missionType, LocalDate assignDate, String objective, String status, int assignTeamId, String description, String address, boolean hasBackup, LocalDate completionDate) {
         this.missionId = missionId;
         this.missionName = missionName;
         this.missionType = missionType;
@@ -26,10 +25,9 @@ public class Mission implements Serializable {
         this.status = status;
         this.assignTeamId = assignTeamId;
         this.description = description;
-        this.teamCaptainId = teamCaptainId;
         this.address = address;
         this.hasBackup = false;
-        this.completionDate = completionDate;
+        this.completionDate = null;
     }
 
     public int getMissionId() {
@@ -64,10 +62,6 @@ public class Mission implements Serializable {
         return description;
     }
 
-    public long getTeamCaptainId() {
-        return teamCaptainId;
-    }
-
     public String getAddress() {
         return address;
     }
@@ -96,10 +90,6 @@ public class Mission implements Serializable {
         this.description = description;
     }
 
-    public void setTeamCaptainId(long teamCaptainId) {
-        this.teamCaptainId = teamCaptainId;
-    }
-
     public void setAddress(String address) {
         this.address = address;
     }
@@ -123,7 +113,6 @@ public class Mission implements Serializable {
                 ", assignDate=" + assignDate +
                 ", assignTeamId=" + assignTeamId +
                 ", description='" + description + '\'' +
-                ", teamCaptainId=" + teamCaptainId +
                 ", address='" + address + '\'' +
                 ", hasBackup=" + hasBackup +
                 ", completionDate=" + completionDate +

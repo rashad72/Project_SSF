@@ -10,7 +10,7 @@
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulation_ssf.Controller.FXMLControllerForUser4.OC_Goal3_ViewController">
     <children>
         <Button layoutX="45.0" layoutY="188.0" mnemonicParsing="false" onAction="#assignTeamButtonOnAction" prefHeight="25.0" prefWidth="497.0" text="Assign Team" />
-        <Label layoutX="245.0" layoutY="14.0" style="-fx-background-color: Cyan;" text="Create New Mission">
+        <Label layoutX="245.0" layoutY="14.0" style="-fx-background-color: Cyan;" text="Assign New Team">
             <font>
                 <Font name="System Bold" size="12.0" />
             </font>
@@ -18,7 +18,7 @@
         <DatePicker fx:id="validUntilDatePicker" layoutX="389.0" layoutY="88.0" prefHeight="25.0" prefWidth="164.0" />
         <Button layoutX="256.0" layoutY="361.0" mnemonicParsing="false" onAction="#backToDashboardButtonOnAction" text="Dashboard" />
         <Label layoutX="324.0" layoutY="92.0" text="Valid Until:" />
-        <Label fx:id="messageLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="37.0" layoutY="229.0" prefHeight="113.0" prefWidth="520.0" style="-fx-background-color: yellow;" text="Fill All the Fields" />
+        <Label fx:id="messageLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="37.0" layoutY="229.0" prefHeight="113.0" prefWidth="520.0" style="-fx-background-color: yellow;" text="Fill All the Fields" wrapText="true" />
         <Label layoutX="33.0" layoutY="55.0" text="Team ID:" />
         <TextField fx:id="teamIdTF" layoutX="124.0" layoutY="51.0" />
         <Label layoutX="321.0" layoutY="55.0" text="Team Name:" />
