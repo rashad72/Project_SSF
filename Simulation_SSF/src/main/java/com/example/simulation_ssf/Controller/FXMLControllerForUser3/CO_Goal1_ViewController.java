@@ -10,6 +10,10 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
+import java.io.EOFException;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.ObjectInputStream;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
@@ -46,9 +50,8 @@ public class CO_Goal1_ViewController
     @javafx.fxml.FXML
     public void initialize() {
         filterMissionStatusCB.getItems().addAll("Rescue", "Surveillance", "Protection");
-        //(int missionId, String missionName, String missionType, LocalDate assignDate,
-        // String objective, String status, int assignTeamId, String description, long teamCaptainId,
-        // String address, boolean hasBackup, LocalDate completionDate)
+
+
         assignTeamIdTableColumn.setCellValueFactory(new PropertyValueFactory<>("assignTeamId"));
         assignDateTableColumn.setCellValueFactory(new PropertyValueFactory<>("assignDate"));
         currentStatusTableColumn.setCellValueFactory(new PropertyValueFactory<>("status"));
@@ -57,8 +60,28 @@ public class CO_Goal1_ViewController
         missionNameTableColumn.setCellValueFactory(new PropertyValueFactory<>("missionName"));
         objectiveTableColumn.setCellValueFactory(new PropertyValueFactory<>("objective"));
 
-
-
+        File file = new File("Mission.bin");
+        if (!file.exists()) {
+            System.out.println("File not found, returning empty list.");
+            return;
+        }
+        try {
+            FileInputStream fis = new FileInputStream(file);
+            ObjectInputStream ois = new ObjectInputStream(fis);
+            while (true){
+                try {
+                    Mission m1 = (Mission) ois.readObject();
+                    missionArrayList.add(m1);
+                } catch (EOFException e) {
+                    System.out.println("Bin file read!");
+                    break;
+                }
+            }
+        }
+        catch (Exception e) {
+            System.out.println("error");
+        }
+        fieldOperationTableView.getItems().addAll(missionArrayList);
     }
 
     @javafx.fxml.FXML
