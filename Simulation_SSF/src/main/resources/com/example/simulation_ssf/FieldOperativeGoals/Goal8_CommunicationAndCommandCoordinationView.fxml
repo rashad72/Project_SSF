@@ -30,9 +30,10 @@
             <TableColumn prefWidth="185.0" text="Date" />
         </columns>
       </TableView>
-      <Button layoutX="445.0" layoutY="375.0" mnemonicParsing="false" onAction="#cccSubmitButtonOnAction" text="Submit" />
+      <Button layoutX="700.0" layoutY="316.0" mnemonicParsing="false" onAction="#cccSubmitButtonOnAction" text="Submit" />
       <TextField fx:id="cccMessageTitleTextField" layoutX="228.0" layoutY="189.0" />
       <TextArea fx:id="cccMessageBodyTextArea" layoutX="227.0" layoutY="228.0" prefHeight="71.0" prefWidth="539.0" />
       <Label layoutX="532.0" layoutY="149.0" text="Date" />
+      <Button layoutX="428.0" layoutY="393.0" mnemonicParsing="false" onAction="#cccShowInTableViewButtonOnAction" text="Show in Table" />
    </children>
 </AnchorPane>

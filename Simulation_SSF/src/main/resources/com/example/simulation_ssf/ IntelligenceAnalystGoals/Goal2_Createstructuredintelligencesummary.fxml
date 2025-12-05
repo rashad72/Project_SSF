@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="458.0" prefWidth="647.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulation_ssf.Controller.FXMLControllerForUser6.IA_Goal2_Controller">
+   <children>
+      <Label layoutX="206.0" layoutY="14.0" prefHeight="38.0" prefWidth="220.0" style="-fx-background-color: cyan;" text="Create a structured intelligence summary." />
+      <TableView fx:id="createIntelliegenceSummuryTV" layoutX="14.0" layoutY="229.0" prefHeight="200.0" prefWidth="627.0">
+        <columns>
+          <TableColumn fx:id="caseIDTC" prefWidth="75.0" text="Case ID " />
+          <TableColumn fx:id="caseTitleTC" prefWidth="75.0" text="Case Title " />
+            <TableColumn fx:id="regionTC" prefWidth="75.0" text="Region" />
+            <TableColumn fx:id="threatTypeTC" prefWidth="75.0" text="Threat Type " />
+            <TableColumn fx:id="priorityTC" prefWidth="75.0" text="Priority" />
+            <TableColumn fx:id="reportedByTC" prefWidth="90.6666259765625" text="Reported By " />
+            <TableColumn fx:id="reportedDateTC" prefWidth="127.99996948242188" text="Reported Date" />
+        </columns>
+      </TableView>
+      <TextField fx:id="caseIDTF" layoutX="105.0" layoutY="65.0" />
+      <TextField fx:id="riskLevelsTF" layoutX="105.0" layoutY="109.0" />
+      <TextField fx:id="recommendationTF" layoutX="105.0" layoutY="162.0" />
+      <Label layoutX="5.0" layoutY="166.0" text="Recommendation " />
+      <Label layoutX="14.0" layoutY="109.0" prefHeight="25.0" prefWidth="60.0" text="Risk Levels " />
+      <Label layoutX="5.0" layoutY="196.0" text="Analysis summury " />
+      <TextField fx:id="analysisTF" layoutX="105.0" layoutY="196.0" />
+      <Label layoutX="14.0" layoutY="69.0" text="Case ID" />
+      <ComboBox fx:id="regionCB" layoutX="351.0" layoutY="65.0" prefWidth="150.0" />
+      <ComboBox fx:id="priorityCB" layoutX="358.0" layoutY="109.0" prefWidth="150.0" />
+      <Label layoutX="286.0" layoutY="69.0" text="Region" />
+      <Label layoutX="284.0" layoutY="113.0" text="Priority " />
+      <Button layoutX="381.0" layoutY="171.0" mnemonicParsing="false" onAction="#createSummuryOnAction" prefHeight="38.0" prefWidth="125.0" text="Create Summury " />
+   </children>
+</AnchorPane>

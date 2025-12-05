@@ -15,6 +15,8 @@ public class FO_Goal6_ViewController
     private TextArea vippAssignedRouteTextField;
     @javafx.fxml.FXML
     private ComboBox vippStatus;
+    @javafx.fxml.FXML
+    private TableView vippTableView;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -22,5 +24,9 @@ public class FO_Goal6_ViewController
 
     @javafx.fxml.FXML
     public void vippUpdateButtonOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void vippShowInTVButtonOnAction(ActionEvent actionEvent) {
     }
 }
