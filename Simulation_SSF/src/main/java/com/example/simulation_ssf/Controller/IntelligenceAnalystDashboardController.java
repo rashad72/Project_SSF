@@ -50,6 +50,19 @@ public class IntelligenceAnalystDashboardController
 
     @javafx.fxml.FXML
     public void CreateSummaryButtonOnAction(ActionEvent actionEvent) {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(SSFApplication.class.getResource("/com/example/simulation_ssf/IntelligenceAnalystGoals/Goal2_Createstructuredintelligencesummary.fxml"));
+            Scene Goal2Scene = new Scene(fxmlLoader.load());
+            Stage currentStage =(Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+//            Stage currentStage = (Stage) dashboardButton.getScene().getWindow();
+            currentStage.setScene(Goal2Scene);
+            currentStage.show();
+
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
+
     }
 
     @javafx.fxml.FXML
