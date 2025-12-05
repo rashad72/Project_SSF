@@ -25,7 +25,7 @@
       <Label layoutX="603.0" layoutY="199.0" text="Status" />
       <DatePicker fx:id="mufeLastMaintenanceDP" layoutX="662.0" layoutY="144.0" />
       <Label layoutX="543.0" layoutY="148.0" text="Last Maintenance" />
-      <TableView fx:id="mufeTableView" layoutX="126.0" layoutY="339.0" prefHeight="230.0" prefWidth="696.0">
+      <TableView fx:id="mufeTableView" layoutX="125.0" layoutY="388.0" prefHeight="230.0" prefWidth="696.0">
         <columns>
           <TableColumn prefWidth="158.0" text="Equipement " />
           <TableColumn prefWidth="179.0" text="Equipement ID" />
@@ -33,7 +33,7 @@
             <TableColumn prefWidth="179.0" text="Status" />
         </columns>
       </TableView>
-      <Button layoutX="403.0" layoutY="266.0" mnemonicParsing="false" onAction="#mufeTableViewButtonOnAction" prefHeight="49.0" prefWidth="138.0" text="Show In Table" />
-      <Button layoutX="684.0" layoutY="632.0" mnemonicParsing="false" onAction="#mufeSubmitStatusButtonOnAction" prefHeight="36.0" prefWidth="138.0" text="Submit Status" />
+      <Button layoutX="395.0" layoutY="324.0" mnemonicParsing="false" onAction="#mufeTableViewButtonOnAction" prefHeight="49.0" prefWidth="138.0" text="Show In Table" />
+      <Button layoutX="698.0" layoutY="239.0" mnemonicParsing="false" onAction="#mufeSubmitStatusButtonOnAction" prefHeight="36.0" prefWidth="138.0" text="Submit Status" />
    </children>
 </AnchorPane>

@@ -25,4 +25,8 @@ public class FO_Goal5_ViewController
     @javafx.fxml.FXML
     public void erchShowInTableViewButtonOnAction(ActionEvent actionEvent) {
     }
+
+    @javafx.fxml.FXML
+    public void erchActionTakenButtonOnAction(ActionEvent actionEvent) {
+    }
 }

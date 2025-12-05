@@ -18,6 +18,10 @@ public class VD_Goal3_ViewController
     private DatePicker eertEvaquationDateDatePicker;
     @javafx.fxml.FXML
     private ComboBox eertEvaquationTypeComboBox;
+    @javafx.fxml.FXML
+    private ComboBox eertEvaquationTypeFilterComboBox1;
+    @javafx.fxml.FXML
+    private DatePicker eertEvaquationDateFilterDatePicker1;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -25,5 +29,13 @@ public class VD_Goal3_ViewController
 
     @javafx.fxml.FXML
     public void eertSubmitButtonOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void eertShowInTableViewButtonOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void eertFilterShowInTableViewButtonOnAction(ActionEvent actionEvent) {
     }
 }
