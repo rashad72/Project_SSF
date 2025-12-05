@@ -82,60 +82,6 @@ public class OC_Goal3_ViewController
                 return;
             }
         }
-//        File teamFile = new File("TeamData.bin");
-//
-//        FileOutputStream dataFos = null;
-//        if (teamFile.exists())
-//            dataFos = new FileOutputStream(teamFile,true);
-//        else
-//            dataFos = new FileOutputStream(teamFile);
-//        DataOutputStream dos = new DataOutputStream(dataFos);
-
-//        try {
-//            ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("TeamData.bin"));
-//            oos.writeObject(teamList);
-//            oos.close();
-//        } catch (IOException e) {
-//            throw new RuntimeException(e);
-//        }
-
-
-//        File teamFile = new File("data/Team.bin");
-//        try{
-//            if (teamFile.exists()){
-//                FileOutputStream fos = new FileOutputStream(teamFile, true);
-//            }else {
-//                FileOutputStream fos = new FileOutputStream(teamFile);
-//            }
-//
- //            ObjectOutputStream oos = new ObjectOutputStream(fos);
-//            oos.writeObject(teamList);
-//            oos.close();
-//            System.out.println("object stored");
-//        } catch (IOException e) {
-//            System.out.println("object not stored");
-//        }
-        ObjectOutputStream oos = null;
-        try{
-            File teamfile = new File("data/Team.bin");
-            FileOutputStream fos = null;
-            if (teamfile.exists()) {
-                fos = new FileOutputStream(teamfile, true);
-                oos = new AppendableObjectOutputStream(fos);
-            }
-            else {
-                fos = new FileOutputStream(teamfile);
-                oos = new ObjectOutputStream(fos);
-
-            }
-
-
-
-        } catch (Exception e) {
-
-        }
-
-
         ArrayList<Long> memberList = new ArrayList<>();
         memberList.add(Long.parseLong(operative1IdTF.getText()));
         memberList.add(Long.parseLong(operative2IdTF.getText()));
@@ -150,10 +96,34 @@ public class OC_Goal3_ViewController
                 validUntilDatePicker.getValue(),
                 false,
                 "Available"
-                );
+        );
         teamList.add(t);
         System.out.println(t);
         messageLabel.setText("Team created" + t);
+
+
+        try {
+            File teamFile = new File("data/Team.bin");
+            FileOutputStream fos = null;
+            ObjectOutputStream oos = null;
+
+            if (teamFile.exists()){
+                fos = new FileOutputStream(teamFile, true);
+                oos = new AppendableObjectOutputStream(fos);
+            }
+            else {
+                fos = new FileOutputStream(teamFile);
+                oos = new ObjectOutputStream(fos);
+            }
+            oos.writeObject(t);
+            oos.close();
+            System.out.println("Object saved");
+        } catch (Exception e) {
+            System.out.println("Not saved");;
+        }
+
+
+
 
     }
 

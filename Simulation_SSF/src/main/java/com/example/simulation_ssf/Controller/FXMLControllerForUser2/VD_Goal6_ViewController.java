@@ -22,6 +22,10 @@ public class VD_Goal6_ViewController
     private DatePicker fulsRefuelDatePicker;
     @javafx.fxml.FXML
     private TextField fulsCostTextField;
+    @javafx.fxml.FXML
+    private DatePicker fulsFilterRefuelDatePicker1;
+    @javafx.fxml.FXML
+    private ComboBox fulsFilterFuelStationComboBox1;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -29,5 +33,9 @@ public class VD_Goal6_ViewController
 
     @javafx.fxml.FXML
     public void fulsAddButtonOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void fulsFilterAddButtonOnAction(ActionEvent actionEvent) {
     }
 }
