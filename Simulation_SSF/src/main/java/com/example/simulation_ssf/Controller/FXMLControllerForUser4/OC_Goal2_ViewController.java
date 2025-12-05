@@ -1,6 +1,7 @@
 package com.example.simulation_ssf.Controller.FXMLControllerForUser4;
 
 import com.example.simulation_ssf.SSFApplication;
+import com.example.simulation_ssf.nonUser.AppendableObjectOutputStream;
 import com.example.simulation_ssf.nonUser.Mission;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -10,6 +11,9 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 
 public class OC_Goal2_ViewController
@@ -49,7 +53,7 @@ public class OC_Goal2_ViewController
             return;
 
             }
-        // validation have to fix.........
+//         validation have to fix.........
 //        int missionId = 0;
 //        int teamId = 0;
 //        try {
@@ -60,7 +64,7 @@ public class OC_Goal2_ViewController
 //            System.out.println("validation 1 done");
 //            messageLabel.setText("Mission ID and Team ID must be valid integers.");
 //        }
-        //ArrayList<Mission> missionList = null
+//        ArrayList<Mission> missionList = null
 //      data and array have to fix.......
 //        for (Mission m:  missionList){
 //            if (missionList.getMissionId() == Integer.parseInt(missionIdTF.getText())){
@@ -92,7 +96,31 @@ public class OC_Goal2_ViewController
                 false,
                 null);
         System.out.println(m);
+        messageLabel.setText("Created.");
         missionList.add(m);
+        try {
+            File missionFile = new File("Mission.bin");
+            FileOutputStream fos = null;
+            ObjectOutputStream oos = null;
+
+            if (missionFile.exists()){
+                fos = new FileOutputStream(missionFile, true);
+
+                oos = new AppendableObjectOutputStream(fos);
+                System.out.println("appendable");
+            }
+            else {
+                fos = new FileOutputStream(missionFile);
+                System.out.println("new");
+                oos = new ObjectOutputStream(fos);
+            }
+            oos.writeObject(m);
+            oos.close();
+            System.out.println("Object saved");
+        } catch (Exception e) {
+            System.out.println("Not saved");;
+        }
+
     }
 
     @Deprecated

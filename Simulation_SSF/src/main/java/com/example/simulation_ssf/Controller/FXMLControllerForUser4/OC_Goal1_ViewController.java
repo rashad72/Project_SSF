@@ -1,6 +1,7 @@
 package com.example.simulation_ssf.Controller.FXMLControllerForUser4;
 
 import com.example.simulation_ssf.SSFApplication;
+import com.example.simulation_ssf.nonUser.Mission;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -8,37 +9,44 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
 
+import java.time.LocalDate;
+import java.util.ArrayList;
+
 public class OC_Goal1_ViewController
 {
     @javafx.fxml.FXML
-    private TableColumn teamCaptainIdTableColumn;
+    private TableColumn<Mission, Long> teamCaptainIdTableColumn;
     @javafx.fxml.FXML
     private TextField filterAddressTF;
     @javafx.fxml.FXML
-    private TableColumn objectiveTableColumn;
+    private TableColumn<Mission, String> objectiveTableColumn;
     @javafx.fxml.FXML
-    private TableColumn missionNameTableColumn;
+    private TableColumn<Mission, String> missionNameTableColumn;
     @javafx.fxml.FXML
-    private TableView fieldOperationTableView;
+    private TableView<Mission> fieldOperationTableView;
     @javafx.fxml.FXML
-    private ComboBox filterMissionStatusCB;
+    private ComboBox<String> filterMissionStatusCB;
     @javafx.fxml.FXML
     private DatePicker filterFromDatePicker;
     @javafx.fxml.FXML
-    private TableColumn missionIdTableColumn;
+    private TableColumn<Mission, Integer> missionIdTableColumn;
     @javafx.fxml.FXML
     private TextField messageTF;
     @javafx.fxml.FXML
-    private TableColumn addressTableColumn;
+    private TableColumn<Mission, String> addressTableColumn;
     @javafx.fxml.FXML
     private TextField missionIdTF;
     @javafx.fxml.FXML
-    private TableColumn currentStatusTableColumn;
+    private TableColumn<Mission, String> currentStatusTableColumn;
     @javafx.fxml.FXML
-    private TableColumn assignDateTableColumn;
+    private TableColumn<Mission, LocalDate> assignDateTableColumn;
+    private ArrayList<Mission> missionList= new ArrayList<>();
 
     @javafx.fxml.FXML
     public void initialize() {
+
+
+
     }
 
     @javafx.fxml.FXML

@@ -103,16 +103,19 @@ public class OC_Goal3_ViewController
 
 
         try {
-            File teamFile = new File("data/Team.bin");
+            File teamFile = new File("Team.bin");
             FileOutputStream fos = null;
             ObjectOutputStream oos = null;
 
             if (teamFile.exists()){
                 fos = new FileOutputStream(teamFile, true);
+
                 oos = new AppendableObjectOutputStream(fos);
+                System.out.println("appendable");
             }
             else {
                 fos = new FileOutputStream(teamFile);
+                System.out.println("new");
                 oos = new ObjectOutputStream(fos);
             }
             oos.writeObject(t);
