@@ -7,7 +7,6 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulation_ssf.Controller.FXMLControllerForUser5.EM_Goal4_Controller">
    <children>
       <TableView fx:id="removeTV" layoutX="14.0" layoutY="64.0" prefHeight="200.0" prefWidth="571.0">
@@ -23,5 +22,6 @@
       <Label layoutX="50.0" layoutY="305.0" text="Equipment ID " />
       <Label layoutX="218.0" layoutY="14.0" prefHeight="25.0" prefWidth="163.0" style="-fx-background-color: cyan;" text="Remove Or Damage Item " />
       <Button layoutX="381.0" layoutY="301.0" mnemonicParsing="false" onAction="#removeButtonOnAction" prefHeight="25.0" prefWidth="103.0" text="Remove Item " />
+      <Button layoutX="248.0" layoutY="343.0" mnemonicParsing="false" onAction="#dashBoardButtonOnAction" text="DashBoard" />
    </children>
 </AnchorPane>

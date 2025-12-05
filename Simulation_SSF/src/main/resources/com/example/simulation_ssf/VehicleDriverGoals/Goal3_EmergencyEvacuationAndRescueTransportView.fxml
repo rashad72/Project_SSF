@@ -41,6 +41,6 @@
       <DatePicker fx:id="eertEvaquationDateFilterDatePicker1" layoutX="731.0" layoutY="188.0" />
       <Label layoutX="634.0" layoutY="148.0" text="Evacuation Type" />
       <Label layoutX="634.0" layoutY="192.0" text="Evacuation Date" />
-      <Button layoutX="720.0" layoutY="269.0" mnemonicParsing="false" onAction="#eertFilterShowInTableViewButtonOnAction" text="Show in Table" />
+      <Button layoutX="720.0" layoutY="269.0" mnemonicParsing="false" onAction="#eertFilterShowInTableViewButtonOnAction" text="Filter Data in Table" />
    </children>
 </AnchorPane>

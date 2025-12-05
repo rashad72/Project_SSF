@@ -9,18 +9,23 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane prefHeight="463.0" prefWidth="657.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulation_ssf.Controller.FXMLControllerForUser5.EM_Goal7_Controller">
    <children>
       <TableView fx:id="setOrUpdateMainDateTV" layoutX="14.0" layoutY="242.0" prefHeight="200.0" prefWidth="635.0">
         <columns>
-          <TableColumn fx:id="equipmentIDTC" prefWidth="89.99999713897705" text="Equipment ID " />
-          <TableColumn fx:id="equipmentNameTC" prefWidth="111.33338165283203" text="Equipment name " />
-            <TableColumn fx:id="categoryTC" prefWidth="75.0" text="Category " />
-            <TableColumn fx:id="lastMaintenDateTC" prefWidth="93.3333740234375" text="Last Main Date " />
-            <TableColumn fx:id="nextMainteDateTC" prefWidth="108.6666259765625" text="Next Mainte Date " />
-            <TableColumn fx:id="technicianTC" prefWidth="81.33328247070312" text="Technician " />
-            <TableColumn fx:id="statusTC" prefWidth="57.3333740234375" text="Status " />
+          <TableColumn fx:id="equipmentIDTC" prefWidth="89.99999713897705" text="Equipment ID "
+                       maxWidth="899.9999713897705" minWidth="30.0"/>
+          <TableColumn fx:id="equipmentNameTC" prefWidth="111.33338165283203" text="Equipment name "
+                       maxWidth="1113.3338165283203" minWidth="30.0"/>
+            <TableColumn fx:id="categoryTC" prefWidth="75.0" text="Category " maxWidth="750.0" minWidth="30.0"/>
+            <TableColumn fx:id="lastMaintenDateTC" prefWidth="93.3333740234375" text="Last Main Date "
+                         maxWidth="933.333740234375" minWidth="30.0"/>
+            <TableColumn fx:id="nextMainteDateTC" prefWidth="108.6666259765625" text="Next Mainte Date "
+                         maxWidth="1086.666259765625" minWidth="30.0"/>
+            <TableColumn fx:id="technicianTC" prefWidth="81.33328247070312" text="Technician "
+                         maxWidth="813.3328247070312" minWidth="30.0"/>
+            <TableColumn fx:id="statusTC" prefWidth="57.3333740234375" text="Status " maxWidth="573.333740234375"
+                         minWidth="30.0"/>
         </columns>
       </TableView>
       <Label layoutX="205.0" layoutY="8.0" prefHeight="42.0" prefWidth="189.0" style="-fx-background-color: cyan;" text="Set Or Update Maintanence Date " />
@@ -35,5 +40,6 @@
       <Button layoutX="388.0" layoutY="194.0" mnemonicParsing="false" onAction="#filterButtonOnAction" prefHeight="34.0" prefWidth="68.0" text="Filter " />
       <Button layoutX="388.0" layoutY="135.0" mnemonicParsing="false" onAction="#updateButtonOnAction" prefHeight="34.0" prefWidth="68.0" text="Update" />
       <Label fx:id="outputL" layoutX="383.0" layoutY="71.0" prefHeight="42.0" prefWidth="269.0" style="-fx-background-color: yellow;" />
+      <Button layoutX="484.0" layoutY="194.0" mnemonicParsing="false" onAction="#dashBoardButtonOnAction" prefHeight="34.0" prefWidth="77.0" text="DashBoard" />
    </children>
 </AnchorPane>

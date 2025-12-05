@@ -8,8 +8,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane prefHeight="442.0" prefWidth="608.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulation_ssf.Controller.FXMLControllerForUser5.EM_Goal2_Controller">
+<AnchorPane prefHeight="457.0" prefWidth="608.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulation_ssf.Controller.FXMLControllerForUser5.EM_Goal2_Controller">
    <children>
       <TableView fx:id="updateEquipmentTV" layoutX="7.0" layoutY="200.0" prefHeight="200.0" prefWidth="542.0">
         <columns>
@@ -30,5 +29,6 @@
       <Button layoutX="133.0" layoutY="164.0" mnemonicParsing="false" onAction="#updateButtonOnAction" prefHeight="25.0" prefWidth="113.0" text="Update Button" />
       <Label fx:id="outputL" layoutX="374.0" layoutY="118.0" prefHeight="59.0" prefWidth="212.0" style="-fx-background-color: Yellow;" />
       <Label alignment="CENTER" layoutX="190.0" layoutY="1.0" prefHeight="25.0" prefWidth="175.0" style="-fx-background-color: cyan;" text="Equiment Manager Update " />
+      <Button layoutX="454.0" layoutY="415.0" mnemonicParsing="false" onAction="#dashboardButtonOnAction" prefHeight="25.0" prefWidth="92.0" text="DashBoard " />
    </children>
 </AnchorPane>
