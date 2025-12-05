@@ -35,5 +35,6 @@
         </columns>
       </TableView>
       <Button layoutX="484.0" layoutY="403.0" mnemonicParsing="false" onAction="#vippShowInTVButtonOnAction" text="Show " />
+      <Button layoutX="798.0" layoutY="664.0" mnemonicParsing="false" onAction="#vippToDashboardButtonOnAction" prefHeight="36.0" prefWidth="74.0" text="Dashboard" />
    </children>
 </AnchorPane>

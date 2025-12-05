@@ -37,5 +37,6 @@
       </TableView>
       <Button layoutX="488.0" layoutY="378.0" mnemonicParsing="false" onAction="#erchShowInTableViewButtonOnAction" text="Show in Table" />
       <Button layoutX="870.0" layoutY="301.0" mnemonicParsing="false" onAction="#erchActionTakenButtonOnAction" text="Action Taken" />
+      <Button layoutX="880.0" layoutY="704.0" mnemonicParsing="false" onAction="#erchToDashboardButtonOnAction" prefHeight="35.0" prefWidth="85.0" text="Dashboard" />
    </children>
 </AnchorPane>

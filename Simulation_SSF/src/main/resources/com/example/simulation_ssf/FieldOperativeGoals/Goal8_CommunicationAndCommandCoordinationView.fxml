@@ -35,5 +35,6 @@
       <TextArea fx:id="cccMessageBodyTextArea" layoutX="227.0" layoutY="228.0" prefHeight="71.0" prefWidth="539.0" />
       <Label layoutX="532.0" layoutY="149.0" text="Date" />
       <Button layoutX="428.0" layoutY="393.0" mnemonicParsing="false" onAction="#cccShowInTableViewButtonOnAction" text="Show in Table" />
+      <Button layoutX="766.0" layoutY="637.0" mnemonicParsing="false" onAction="#cccToDashboardButtonOnAction" prefHeight="35.0" prefWidth="81.0" text="Dashboard" />
    </children>
 </AnchorPane>

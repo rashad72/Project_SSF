@@ -36,11 +36,12 @@
       </TableView>
       <Button layoutX="279.0" layoutY="310.0" mnemonicParsing="false" onAction="#eertSubmitButtonOnAction" text="Submit" />
       <Button layoutX="466.0" layoutY="432.0" mnemonicParsing="false" onAction="#eertShowInTableViewButtonOnAction" text="Show in Table" />
-      <Line endX="-68.0" endY="244.0" layoutX="567.0" layoutY="138.0" startX="-68.0" startY="-11.0" />
+      <Line endX="-68.0" endY="263.0" layoutX="567.0" layoutY="138.0" startX="-68.0" startY="-11.0" />
       <ComboBox fx:id="eertEvaquationTypeFilterComboBox1" layoutX="731.0" layoutY="144.0" prefWidth="150.0" />
       <DatePicker fx:id="eertEvaquationDateFilterDatePicker1" layoutX="731.0" layoutY="188.0" />
       <Label layoutX="634.0" layoutY="148.0" text="Evacuation Type" />
       <Label layoutX="634.0" layoutY="192.0" text="Evacuation Date" />
       <Button layoutX="720.0" layoutY="269.0" mnemonicParsing="false" onAction="#eertFilterShowInTableViewButtonOnAction" text="Filter Data in Table" />
+      <Button layoutX="799.0" layoutY="714.0" mnemonicParsing="false" onAction="#eertToDashboardButtonOnAction" prefHeight="38.0" prefWidth="74.0" text="Dashboard" />
    </children>
 </AnchorPane>

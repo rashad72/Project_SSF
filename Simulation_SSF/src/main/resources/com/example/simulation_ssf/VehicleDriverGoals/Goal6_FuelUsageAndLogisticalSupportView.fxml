@@ -47,5 +47,6 @@
       <DatePicker fx:id="fulsFilterRefuelDatePicker1" layoutX="694.0" layoutY="188.0" prefHeight="25.0" prefWidth="156.0" />
       <Label layoutX="622.0" layoutY="196.0" text="Refuel Date" />
       <Button layoutX="653.0" layoutY="253.0" mnemonicParsing="false" onAction="#fulsFilterAddButtonOnAction" prefHeight="44.0" prefWidth="149.0" text="Show filter Data In table" />
+      <Button layoutX="775.0" layoutY="720.0" mnemonicParsing="false" onAction="#fulsToDashboardButtonOnAction" prefHeight="44.0" prefWidth="81.0" text="Dashboard" />
    </children>
 </AnchorPane>

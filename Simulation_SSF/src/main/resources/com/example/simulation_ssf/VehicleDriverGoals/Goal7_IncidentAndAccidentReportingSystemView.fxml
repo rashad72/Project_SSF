@@ -12,7 +12,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="717.0" prefWidth="892.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulation_ssf.Controller.FXMLControllerForUser2.VD_Goal7_ViewController">
+<AnchorPane prefHeight="739.0" prefWidth="892.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulation_ssf.Controller.FXMLControllerForUser2.VD_Goal7_ViewController">
    <children>
       <Label layoutX="275.0" layoutY="53.0" text="Incident &amp; Accident Reporting ">
          <font>
@@ -42,5 +42,6 @@
       <DatePicker fx:id="iarFilterDatePicker1" layoutX="622.0" layoutY="183.0" />
       <Label layoutX="511.0" layoutY="187.0" text="Incident Date Picker" />
       <Button layoutX="630.0" layoutY="268.0" mnemonicParsing="false" onAction="#iarFilterSubmitButtonOnAction" prefHeight="49.0" prefWidth="150.0" text="Filter Data In Table View" />
+      <Button layoutX="736.0" layoutY="666.0" mnemonicParsing="false" onAction="#iarToDashboardButtonOnAction" prefHeight="49.0" prefWidth="93.0" text="Dashboard" />
    </children>
 </AnchorPane>

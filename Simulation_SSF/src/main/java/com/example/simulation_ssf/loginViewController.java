@@ -42,7 +42,16 @@ public class loginViewController
             }
         }
         if (loginUserType.equals("Vehicle Driver")){
-            //fxml Load
+            try {
+                FXMLLoader fxmlLoader = new FXMLLoader(SSFApplication.class.getResource("/com/example/simulation_ssf/DashboardOfUsers/VehicleDriver.fxml"));
+                Scene dashboardScene = new Scene(fxmlLoader.load());
+                Stage currentStage =(Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+                currentStage.setScene(dashboardScene);
+                currentStage.show();
+
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+            }
         }
         if (loginUserType.equals("Communication Officer")){
             try {

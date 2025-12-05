@@ -37,6 +37,7 @@
         </columns>
       </TableView>
       <Button layoutX="309.0" layoutY="347.0" mnemonicParsing="false" onAction="#fICRuploadEVandShowTableButtonOnAction" prefHeight="43.0" prefWidth="286.0" text="Upload Evidence &amp; Show in Table" />
-      <Button layoutX="637.0" layoutY="658.0" mnemonicParsing="false" onAction="#fICRSubmitButtonOnAction" prefHeight="65.0" prefWidth="161.0" text="Submit" />
+      <Button layoutX="358.0" layoutY="635.0" mnemonicParsing="false" onAction="#fICRSubmitButtonOnAction" prefHeight="65.0" prefWidth="161.0" text="Submit" />
+      <Button layoutX="674.0" layoutY="679.0" mnemonicParsing="false" onAction="#fICRtoDashboardButtonOnAction" prefHeight="43.0" prefWidth="127.0" text="Dashboard" />
    </children>
 </AnchorPane>

@@ -4,7 +4,6 @@ module com.example.simulation_ssf {
     requires javafx.graphics;
 
 
-
     opens com.example.simulation_ssf to javafx.fxml;
     // new add
     opens com.example.simulation_ssf.Controller to javafx.fxml;

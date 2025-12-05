@@ -5,7 +5,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="562.0" prefWidth="761.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulation_ssf.Controller.VehicleDriverDashboardController">
    <children>
       <Label layoutX="249.0" layoutY="53.0" prefHeight="67.0" prefWidth="295.0" style="-fx-background-color: aqua;" text="Vehicle Driver Operations" textAlignment="CENTER">
@@ -20,6 +19,7 @@
       <Button layoutX="396.0" layoutY="174.0" mnemonicParsing="false" onAction="#commandAndMaintenanceCoordinationButtonOnAction" prefHeight="51.0" prefWidth="253.0" text="Command and Maintenance Coordination" />
       <Button layoutX="396.0" layoutY="240.0" mnemonicParsing="false" onAction="#fuelUsageAndLogisticalSupportButtonOnAction" prefHeight="51.0" prefWidth="253.0" text="Fuel Usage and Logistical Support" />
       <Button layoutX="396.0" layoutY="305.0" mnemonicParsing="false" onAction="#incidentAndAccidentReportingSystemButtonOnAction" prefHeight="51.0" prefWidth="253.0" text="Incident and Accident Reporting System" />
-      <Button layoutX="396.0" layoutY="369.0" mnemonicParsing="false" onAction="#trainingAndDrivingSkillEvaluationButtonOnAction" prefHeight="51.0" prefWidth="253.0" text="Training and Driving Skill Evaluation" />
+      <Button layoutX="396.0" layoutY="369.0" mnemonicParsing="false" onAction="#dailyVehicleSkillSummaryButtonOnAction" prefHeight="51.0" prefWidth="253.0" text="Daily Vehicle Skill Summary" />
+      <Button layoutX="355.0" layoutY="490.0" mnemonicParsing="false" onAction="#logOutButtonOnAction" text="Logout" />
    </children>
 </AnchorPane>

@@ -34,5 +34,6 @@
       </TableView>
       <Button layoutX="682.0" layoutY="259.0" mnemonicParsing="false" onAction="#setsSubmitButtonOnAction" prefHeight="54.0" prefWidth="87.0" text="Submit" />
       <Button layoutX="389.0" layoutY="338.0" mnemonicParsing="false" onAction="#setsFilterDataAndShowButtonOnAction" prefHeight="54.0" prefWidth="230.0" text="Filter and Show Data in table" />
+      <Button layoutX="794.0" layoutY="698.0" mnemonicParsing="false" onAction="#setsToDashboardButtonOnAction" prefHeight="38.0" prefWidth="87.0" text="Dashboard" />
    </children>
 </AnchorPane>

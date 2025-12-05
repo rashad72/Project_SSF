@@ -10,8 +10,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="769.0" prefWidth="959.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulation_ssf.Controller.FXMLControllerForUser2.VD_Goal8_ViewController">
+<AnchorPane prefHeight="810.0" prefWidth="959.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulation_ssf.Controller.FXMLControllerForUser2.VD_Goal8_ViewController">
    <children>
       <Label layoutX="310.0" layoutY="60.0" text="Daily Vehicle Usage Summary">
          <font>
@@ -32,7 +31,7 @@
       <Label layoutX="498.0" layoutY="117.0" text="Date" />
       <TextArea layoutX="257.0" layoutY="221.0" prefHeight="97.0" prefWidth="446.0" />
       <Label layoutX="176.0" layoutY="261.0" text="Travel Purpose" />
-      <TableView fx:id="dvusTableView" layoutX="87.0" layoutY="521.0" prefHeight="200.0" prefWidth="787.0">
+      <TableView fx:id="dvusTableView" layoutX="87.0" layoutY="501.0" prefHeight="200.0" prefWidth="787.0">
         <columns>
           <TableColumn prefWidth="149.0" text="Vehicle ID" />
           <TableColumn prefWidth="138.0" text="Date" />
@@ -41,8 +40,9 @@
             <TableColumn prefWidth="253.0" text="Travels Purpose" />
         </columns>
       </TableView>
-      <Button layoutX="310.0" layoutY="459.0" mnemonicParsing="false" onAction="#dvusAddInTableButtonOnAction" prefHeight="38.0" prefWidth="354.0" text="Add In Table" />
-      <Button layoutX="358.0" layoutY="372.0" mnemonicParsing="false" onAction="#dvusTotalDistanceButtonOnAction" text="Total Distance" />
-      <Button layoutX="523.0" layoutY="372.0" mnemonicParsing="false" onAction="#dvusTotalTimeButtonOnAction" text="Total Time" />
+      <Button layoutX="310.0" layoutY="433.0" mnemonicParsing="false" onAction="#dvusAddInTableButtonOnAction" prefHeight="38.0" prefWidth="354.0" text="Add In Table" />
+      <Button layoutX="358.0" layoutY="347.0" mnemonicParsing="false" onAction="#dvusTotalDistanceButtonOnAction" text="Total Distance" />
+      <Button layoutX="523.0" layoutY="347.0" mnemonicParsing="false" onAction="#dvusTotalTimeButtonOnAction" text="Total Time" />
+      <Button layoutX="722.0" layoutY="730.0" mnemonicParsing="false" onAction="#dvusToDashboardButtonOnAction" prefHeight="38.0" prefWidth="149.0" text="Dashboard" />
    </children>
 </AnchorPane>
