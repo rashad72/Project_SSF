@@ -9,8 +9,8 @@
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
-
 
 <AnchorPane prefHeight="717.0" prefWidth="892.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulation_ssf.Controller.FXMLControllerForUser2.VD_Goal7_ViewController">
    <children>
@@ -19,15 +19,15 @@
             <Font size="25.0" />
          </font>
       </Label>
-      <Label layoutX="126.0" layoutY="145.0" text="Incident Type" />
-      <ComboBox fx:id="iarIncidentTypeComboBox" layoutX="200.0" layoutY="141.0" prefWidth="150.0" />
+      <Label layoutX="126.0" layoutY="136.0" text="Incident Type" />
+      <ComboBox fx:id="iarIncidentTypeComboBox" layoutX="200.0" layoutY="132.0" prefWidth="150.0" />
       <Label layoutX="152.0" layoutY="181.0" text="Location" />
       <TextField fx:id="iarLocationTextField" layoutX="201.0" layoutY="177.0" />
       <TextArea fx:id="iarDescriptionTextArea" layoutX="200.0" layoutY="215.0" prefHeight="85.0" prefWidth="239.0" />
       <Label layoutX="132.0" layoutY="241.0" text="Description" />
-      <DatePicker fx:id="iarDatePicker" layoutX="233.0" layoutY="331.0" />
-      <Label layoutX="122.0" layoutY="335.0" text="Incident Date Picker" />
-      <Button layoutX="353.0" layoutY="372.0" mnemonicParsing="false" onAction="#iarSubmitButtonOnAction" prefHeight="49.0" prefWidth="54.0" text="Submit" />
+      <DatePicker fx:id="iarDatePicker" layoutX="198.0" layoutY="317.0" />
+      <Label layoutX="87.0" layoutY="321.0" text="Incident Date Picker" />
+      <Button layoutX="359.0" layoutY="369.0" mnemonicParsing="false" onAction="#iarSubmitButtonOnAction" prefHeight="49.0" prefWidth="54.0" text="Submit" />
       <TableView fx:id="iarTableView" layoutX="81.0" layoutY="449.0" prefHeight="200.0" prefWidth="715.0">
         <columns>
           <TableColumn prefWidth="162.0" text="Type" />
@@ -36,5 +36,11 @@
             <TableColumn prefWidth="274.0" text="Deesciption" />
         </columns>
       </TableView>
+      <Line endX="-27.0" endY="281.0" layoutX="496.0" layoutY="124.0" startX="-27.0" startY="-16.0" />
+      <Label layoutX="556.0" layoutY="136.0" text="Incident Type" />
+      <ComboBox fx:id="iarFilterIncidentTypeComboBox1" layoutX="630.0" layoutY="132.0" prefWidth="150.0" />
+      <DatePicker fx:id="iarFilterDatePicker1" layoutX="622.0" layoutY="183.0" />
+      <Label layoutX="511.0" layoutY="187.0" text="Incident Date Picker" />
+      <Button layoutX="630.0" layoutY="268.0" mnemonicParsing="false" onAction="#iarFilterSubmitButtonOnAction" prefHeight="49.0" prefWidth="150.0" text="Filter Data In Table View" />
    </children>
 </AnchorPane>
