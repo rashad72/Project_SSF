@@ -1,8 +1,9 @@
 package com.example.simulation_ssf.nonUser;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class Equipment {
+public class Equipment implements Serializable {
 
     private int equipmentID;
     private String equipmentName;
