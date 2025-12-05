@@ -97,14 +97,9 @@ public class Mission implements Serializable {
     public void setHasBackup(boolean hasBackup) {
         this.hasBackup = hasBackup;
     }
-
-<<<<<<< HEAD
-    public void setBackupTeam(Team backupTeam) {this.backupTeam = backupTeam;}
-=======
     public void setCompletionDate(LocalDate completionDate) {
         this.completionDate = completionDate;
     }
->>>>>>> d23a171362ca59cc7abe756fe5005c9a512b2d95
 
     @Override
     public String toString() {
