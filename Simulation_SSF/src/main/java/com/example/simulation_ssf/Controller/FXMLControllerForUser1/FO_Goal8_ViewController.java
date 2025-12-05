@@ -23,4 +23,8 @@ public class FO_Goal8_ViewController
     @javafx.fxml.FXML
     public void cccSubmitButtonOnAction(ActionEvent actionEvent) {
     }
+
+    @javafx.fxml.FXML
+    public void cccShowInTableViewButtonOnAction(ActionEvent actionEvent) {
+    }
 }
