@@ -70,7 +70,6 @@ public class loginViewController
                 FXMLLoader fxmlLoader = new FXMLLoader(SSFApplication.class.getResource("/com/example/simulation_ssf/DashboardOfUsers/EquipmentManagerDashbord.fxml"));
                 Scene dashboardScene = new Scene(fxmlLoader.load());
                 Stage currentStage =(Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-//            Stage currentStage = (Stage) dashboardButton.getScene().getWindow();
                 currentStage.setScene(dashboardScene);
                 currentStage.show();
 
@@ -83,7 +82,6 @@ public class loginViewController
                 FXMLLoader fxmlLoader = new FXMLLoader(SSFApplication.class.getResource("/com/example/simulation_ssf/DashboardOfUsers/IntelligenceAnalyst.fxml"));
                 Scene dashboardScene = new Scene(fxmlLoader.load());
                 Stage currentStage =(Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-//            Stage currentStage = (Stage) dashboardButton.getScene().getWindow();
                 currentStage.setScene(dashboardScene);
                 currentStage.show();
 
