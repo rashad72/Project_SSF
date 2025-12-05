@@ -7,7 +7,6 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane prefHeight="480.0" prefWidth="651.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulation_ssf.Controller.FXMLControllerForUser6.IA_Goal8_Controller">
    <children>
       <BarChart fx:id="barChart" layoutX="151.0" layoutY="66.0">
@@ -18,7 +17,8 @@
           <NumberAxis side="LEFT" />
         </yAxis>
       </BarChart>
-      <Button layoutX="40.0" layoutY="415.0" mnemonicParsing="false" onAction="#exportButtonOnAction" text="Export" />
+      <Button layoutX="57.0" layoutY="348.0" mnemonicParsing="false" onAction="#exportButtonOnAction" text="Export" />
       <Label layoutX="215.0" layoutY="14.0" prefHeight="38.0" prefWidth="176.0" style="-fx-background-color: cyan;" text="View visual analytics of operation" />
+      <Button layoutX="46.0" layoutY="420.0" mnemonicParsing="false" onAction="#dashBoardButtonOnAction" prefHeight="25.0" prefWidth="77.0" text="DashBoard" />
    </children>
 </AnchorPane>

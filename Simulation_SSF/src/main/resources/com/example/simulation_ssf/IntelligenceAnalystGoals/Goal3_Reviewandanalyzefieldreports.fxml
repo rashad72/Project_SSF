@@ -7,7 +7,6 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulation_ssf.Controller.FXMLControllerForUser6.IA_Goal3_Controller">
    <children>
       <Label layoutX="19.0" layoutY="52.0" text="Reporter ID " />
@@ -26,7 +25,8 @@
       <DatePicker fx:id="toDP" layoutX="384.0" layoutY="99.0" />
       <Label layoutX="282.0" layoutY="52.0" prefHeight="4.0" prefWidth="65.0" text="From " />
       <Label layoutX="282.0" layoutY="95.0" prefHeight="4.0" prefWidth="65.0" text="TO " />
-      <Button fx:id="f" layoutX="365.0" layoutY="176.0" mnemonicParsing="false" onAction="#filterButtonOnAction" prefHeight="34.0" prefWidth="91.0" text="Filter " />
+      <Button layoutX="365.0" layoutY="176.0" mnemonicParsing="false" onAction="#filterButtonOnAction" prefHeight="34.0" prefWidth="91.0" text="Filter " />
       <Label layoutX="196.0" layoutY="7.0" prefHeight="34.0" prefWidth="171.0" style="-fx-background-color: cyan;" text="Review and analyze field reports" />
+      <Button layoutX="356.0" layoutY="267.0" mnemonicParsing="false" onAction="#dashBoardButtonOnAction" prefHeight="34.0" prefWidth="91.0" text="DashBoard" />
    </children>
 </AnchorPane>

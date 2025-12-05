@@ -1,6 +1,7 @@
 package com.example.simulation_ssf.nonUser;
 
 import java.io.Serializable;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 public class Message implements Serializable {
@@ -10,12 +11,12 @@ public class Message implements Serializable {
     private int missionId;
     private String subject;
     private String content;
-    private LocalDateTime timestamp;
+    private LocalDate timestamp;
     private String status = "UNREAD"; // "UNREAD", "READ", "ARCHIVED"
     private  String missionType; // "Rescue", "Surveillance" "Protection"
 
 
-    public Message(int messageId, int senderId, int receiverId, int missionId, String subject, String content, LocalDateTime timestamp, String status, String missionType) {
+    public Message(int messageId, int senderId, int receiverId, int missionId, String subject, String content, LocalDate timestamp, String status, String missionType) {
         this.messageId = messageId;
         this.senderId = senderId;
         this.receiverId = receiverId;
@@ -35,44 +36,64 @@ public class Message implements Serializable {
         return senderId;
     }
 
+    public void setSenderId(int senderId) {
+        this.senderId = senderId;
+    }
+
     public int getReceiverId() {
         return receiverId;
+    }
+
+    public void setReceiverId(int receiverId) {
+        this.receiverId = receiverId;
     }
 
     public int getMissionId() {
         return missionId;
     }
 
+    public void setMissionId(int missionId) {
+        this.missionId = missionId;
+    }
+
     public String getSubject() {
         return subject;
-    }
-
-    public String getContent() {
-        return content;
-    }
-
-    public LocalDateTime getTimestamp() {
-        return timestamp;
-    }
-
-    public String getStatus() {
-        return status;
-    }
-
-    public String getMissionType() {
-        return missionType;
     }
 
     public void setSubject(String subject) {
         this.subject = subject;
     }
 
+    public String getContent() {
+        return content;
+    }
+
     public void setContent(String content) {
         this.content = content;
     }
 
+    public LocalDate getTimestamp() {
+        return timestamp;
+    }
+
+    public void setTimestamp(LocalDate timestamp) {
+        this.timestamp = timestamp;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    public String getMissionType() {
+        return missionType;
+    }
+
+    public void setMissionType(String missionType) {
+        this.missionType = missionType;
     }
 
     @Override
@@ -89,6 +110,5 @@ public class Message implements Serializable {
                 ", missionType='" + missionType + '\'' +
                 '}';
     }
-
 }
 
