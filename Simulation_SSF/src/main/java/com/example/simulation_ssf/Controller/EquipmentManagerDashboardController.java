@@ -50,6 +50,7 @@ public class EquipmentManagerDashboardController
     @javafx.fxml.FXML
     public void AddEquipmentButtonOnAction(ActionEvent actionEvent) {
         try{
+
             FXMLLoader fxmlLoader = new FXMLLoader(SSFApplication.class.getResource("/com/example/simulation_ssf/EquipmentManagerGoals/Goal1_AddNewEquipment.fxml"));
             Scene Goal1Scene = new Scene(fxmlLoader.load());
             Stage currentStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();

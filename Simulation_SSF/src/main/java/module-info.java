@@ -10,5 +10,6 @@ module com.example.simulation_ssf {
     //new
     opens com.example.simulation_ssf.Controller.FXMLControllerForUser3 to javafx.fxml;
     opens com.example.simulation_ssf.Controller.FXMLControllerForUser4 to javafx.fxml;
+    opens com.example.simulation_ssf.Controller.FXMLControllerForUser5 to javafx.fxml;
     exports com.example.simulation_ssf;
 }

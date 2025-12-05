@@ -1,6 +1,7 @@
 package com.example.simulation_ssf.Controller.FXMLControllerForUser4;
 
 import com.example.simulation_ssf.SSFApplication;
+import com.example.simulation_ssf.nonUser.AppendableObjectOutputStream;
 import com.example.simulation_ssf.nonUser.Team;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
@@ -9,6 +10,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
 
+import java.io.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
@@ -65,7 +67,7 @@ public class OC_Goal3_ViewController
             System.out.println("validation 1 done.");
             return;
         }
-        //validation 3 need to be done..
+        //validation 3 need to be done.
 
         if (validUntilDatePicker.getValue().isBefore(LocalDate.now())){
             messageLabel.setText("Valid date cannot be in the past");
@@ -80,15 +82,58 @@ public class OC_Goal3_ViewController
                 return;
             }
         }
+//        File teamFile = new File("TeamData.bin");
+//
+//        FileOutputStream dataFos = null;
+//        if (teamFile.exists())
+//            dataFos = new FileOutputStream(teamFile,true);
+//        else
+//            dataFos = new FileOutputStream(teamFile);
+//        DataOutputStream dos = new DataOutputStream(dataFos);
+
+//        try {
+//            ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("TeamData.bin"));
+//            oos.writeObject(teamList);
+//            oos.close();
+//        } catch (IOException e) {
+//            throw new RuntimeException(e);
+//        }
+
+
+//        File teamFile = new File("data/Team.bin");
+//        try{
+//            if (teamFile.exists()){
+//                FileOutputStream fos = new FileOutputStream(teamFile, true);
+//            }else {
+//                FileOutputStream fos = new FileOutputStream(teamFile);
+//            }
+//
+ //            ObjectOutputStream oos = new ObjectOutputStream(fos);
+//            oos.writeObject(teamList);
+//            oos.close();
+//            System.out.println("object stored");
+//        } catch (IOException e) {
+//            System.out.println("object not stored");
+//        }
+        ObjectOutputStream oos = null;
+        try{
+            File teamfile = new File("data/Team.bin");
+            FileOutputStream fos = null;
+            if (teamfile.exists()) {
+                fos = new FileOutputStream(teamfile, true);
+                oos = new AppendableObjectOutputStream(fos);
+            }
+            else {
+                fos = new FileOutputStream(teamfile);
+                oos = new ObjectOutputStream(fos);
+
+            }
 
 
 
+        } catch (Exception e) {
 
-
-
-
-
-
+        }
 
 
         ArrayList<Long> memberList = new ArrayList<>();

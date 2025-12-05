@@ -50,16 +50,16 @@ public class OC_Goal2_ViewController
 
             }
         // validation have to fix.........
-        int missionId = 0;
-        int teamId = 0;
-        try {
-            missionId = Integer.parseInt(missionIdTF.getText());
-            teamId = Integer.parseInt(teamIdTF.getText());
-
-        } catch (NumberFormatException e) {
-            System.out.println("validation 1 done");
-            messageLabel.setText("Mission ID and Team ID must be valid integers.");
-        }
+//        int missionId = 0;
+//        int teamId = 0;
+//        try {
+//            missionId = Integer.parseInt(missionIdTF.getText());
+//            teamId = Integer.parseInt(teamIdTF.getText());
+//
+//        } catch (NumberFormatException e) {
+//            System.out.println("validation 1 done");
+//            messageLabel.setText("Mission ID and Team ID must be valid integers.");
+//        }
         //ArrayList<Mission> missionList = null
 //      data and array have to fix.......
 //        for (Mission m:  missionList){
