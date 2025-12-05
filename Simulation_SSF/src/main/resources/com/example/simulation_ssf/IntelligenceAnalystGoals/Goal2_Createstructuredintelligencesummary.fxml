@@ -8,7 +8,6 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane prefHeight="458.0" prefWidth="647.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulation_ssf.Controller.FXMLControllerForUser6.IA_Goal2_Controller">
    <children>
       <Label layoutX="206.0" layoutY="14.0" prefHeight="38.0" prefWidth="220.0" style="-fx-background-color: cyan;" text="Create a structured intelligence summary." />
@@ -35,6 +34,7 @@
       <ComboBox fx:id="priorityCB" layoutX="358.0" layoutY="109.0" prefWidth="150.0" />
       <Label layoutX="286.0" layoutY="69.0" text="Region" />
       <Label layoutX="284.0" layoutY="113.0" text="Priority " />
-      <Button layoutX="381.0" layoutY="171.0" mnemonicParsing="false" onAction="#createSummuryOnAction" prefHeight="38.0" prefWidth="125.0" text="Create Summury " />
+      <Button layoutX="278.0" layoutY="186.0" mnemonicParsing="false" onAction="#createSummuryOnAction" prefHeight="38.0" prefWidth="125.0" text="Create Summury " />
+      <Button layoutX="438.0" layoutY="186.0" mnemonicParsing="false" onAction="#dashBoardButtonOnAction" prefHeight="38.0" prefWidth="125.0" text="DashBoard" />
    </children>
 </AnchorPane>

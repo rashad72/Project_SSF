@@ -10,18 +10,22 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
+import java.util.ArrayList;
+
 public class EM_Goal1_Controller
 {
     @javafx.fxml.FXML
-    private ComboBox typeCB;
+    private ComboBox<String> typeCB;
     @javafx.fxml.FXML
-    private ComboBox statusCB;
+    private ComboBox<String> statusCB;
     @javafx.fxml.FXML
     private Label outputL;
     @javafx.fxml.FXML
     private TextField equipmentNameTF;
     @javafx.fxml.FXML
     private TextField quantityTF;
+
+    private 
 
     @javafx.fxml.FXML
     public void initialize() {
