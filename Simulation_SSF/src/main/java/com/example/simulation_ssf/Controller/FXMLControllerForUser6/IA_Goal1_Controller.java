@@ -1,46 +1,64 @@
 package com.example.simulation_ssf.Controller.FXMLControllerForUser6;
 
 import com.example.simulation_ssf.SSFApplication;
+import com.example.simulation_ssf.nonUser.ThreatReport;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
 public class IA_Goal1_Controller
 {
     @javafx.fxml.FXML
-    private TableColumn reportDateTC;
+    private TableColumn<ThreatReport,String> reportDateTC;
     @javafx.fxml.FXML
-    private TableColumn reportIDTC;
+    private TableColumn<ThreatReport,Integer> reportIDTC;
     @javafx.fxml.FXML
-    private ComboBox regionCB;
+    private ComboBox<String> regionCB;
     @javafx.fxml.FXML
-    private TableView viewandAnalyzeTV;
+    private TableView<ThreatReport> viewandAnalyzeTV;
     @javafx.fxml.FXML
-    private TableColumn PriorityTC;
+    private TableColumn<ThreatReport,String> PriorityTC;
     @javafx.fxml.FXML
     private DatePicker toDP;
     @javafx.fxml.FXML
-    private ComboBox priorityCB;
+    private ComboBox<String> priorityCB;
     @javafx.fxml.FXML
-    private TableColumn threatTypeTC;
+    private TableColumn<ThreatReport,String> threatTypeTC;
     @javafx.fxml.FXML
-    private TableColumn regionTC;
+    private TableColumn<ThreatReport,String> regionTC;
     @javafx.fxml.FXML
     private TextField reportIDTF;
     @javafx.fxml.FXML
     private Label outputL;
     @javafx.fxml.FXML
-    private TableColumn sourceTC;
+    private TableColumn<ThreatReport,String> sourceTC;
     @javafx.fxml.FXML
-    private TableColumn summuryTC;
+    private TableColumn<ThreatReport,String> summuryTC;
     @javafx.fxml.FXML
     private DatePicker fromDP;
 
     @javafx.fxml.FXML
     public void initialize() {
+        regionCB.getItems().addAll("Dhaka","Chittagong","Sylhet","Rajshahi","Khulna","Rangpur");
+        priorityCB.getItems().addAll("Low","Medium","High","Critical");
+        reportDateTC.setCellValueFactory(new PropertyValueFactory<>("reportDate"));
+        PriorityTC.setCellValueFactory(new PropertyValueFactory<>("reportDate"));
+        threatTypeTC.setCellValueFactory(new PropertyValueFactory<>("reportDate"));
+        regionTC.setCellValueFactory(new PropertyValueFactory<>("reportDate"));
+        sourceTC.setCellValueFactory(new PropertyValueFactory<>("reportDate"));
+        summuryTC.setCellValueFactory(new PropertyValueFactory<>("reportDate"));
+        reportIDTC.setCellValueFactory(new PropertyValueFactory<>("reportID"));
+
+
+
+
+
+
+
     }
 
     @javafx.fxml.FXML
