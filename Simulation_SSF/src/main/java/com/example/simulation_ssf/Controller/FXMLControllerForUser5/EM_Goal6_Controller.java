@@ -1,49 +1,98 @@
 package com.example.simulation_ssf.Controller.FXMLControllerForUser5;
 
 import com.example.simulation_ssf.SSFApplication;
+import com.example.simulation_ssf.nonUser.Equipment;
+import com.example.simulation_ssf.nonUser.MonitorItem;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
+
+import java.time.LocalDate;
+import java.util.ArrayList;
 
 public class EM_Goal6_Controller
 {
-    @javafx.fxml.FXML
-    private TableColumn itemIDTC;
-    @javafx.fxml.FXML
+    @FXML
+    private TableColumn<MonitorItem,String> itemIDTC;
+    @FXML
     private DatePicker lastUDateDP;
-    @javafx.fxml.FXML
-    private TableColumn statusTC;
-    @javafx.fxml.FXML
-    private ComboBox statusCB;
-    @javafx.fxml.FXML
-    private TableColumn lastUpdatedTC;
-    @javafx.fxml.FXML
+    @FXML
+    private TableColumn<MonitorItem,String> statusTC;
+    @FXML
+    private ComboBox<String> statusCB;
+    @FXML
+    private TableColumn<MonitorItem, LocalDate> lastUpdatedTC;
+    @FXML
     private TextField itemIDTF;
-    @javafx.fxml.FXML
-    private TableColumn categoryTC;
-    @javafx.fxml.FXML
-    private ComboBox categoryCB;
-    @javafx.fxml.FXML
-    private TableView monitorAlertTV;
-    @javafx.fxml.FXML
-    private TableColumn quantityTC;
-    @javafx.fxml.FXML
-    private TableColumn minimumRequiredTC;
-    @javafx.fxml.FXML
-    private TableColumn itemNameTC;
+    @FXML
+    private TableColumn<MonitorItem,String> categoryTC;
+    @FXML
+    private ComboBox<String> categoryCB;
+    @FXML
+    private TableView<MonitorItem> monitorAlertTV;
+    @FXML
+    private TableColumn<MonitorItem,Integer> quantityTC;
+    @FXML
+    private TableColumn<MonitorItem,Integer> minimumRequiredTC;
+    @FXML
+    private TableColumn<MonitorItem,String> itemNameTC;
+    private ArrayList<Equipment> equipmentList = new ArrayList<>();
 
-    @javafx.fxml.FXML
+    @FXML
     public void initialize() {
+        categoryCB.getItems().addAll("Medical", "Electrical","Safety","Furniture","Storage");
+        statusCB.getItems().addAll("Available","Low Stock","Out of Stock","Damaged");
+        itemIDTC.setCellValueFactory(new PropertyValueFactory<>("itemID"));
+        statusTC.setCellValueFactory(new PropertyValueFactory<>("status"));
+        lastUpdatedTC.setCellValueFactory(new PropertyValueFactory<>("lastUpdated"));
+        categoryTC.setCellValueFactory(new PropertyValueFactory<>("category"));
+        quantityTC.setCellValueFactory(new PropertyValueFactory<>("quantity"));
+        minimumRequiredTC.setCellValueFactory(new PropertyValueFactory<>("minimumRequired"));
+        itemNameTC.setCellValueFactory(new PropertyValueFactory<>("itemName"));
     }
 
-    @javafx.fxml.FXML
+    @FXML
     public void filterButtonOnAction(ActionEvent actionEvent) {
+        String idFilter = itemIDTF.getText().trim();
+        String categoryFilter = categoryCB.getValue();
+        String statusFilter = statusCB.getValue();
+        LocalDate dateFilter = lastUDateDP.getValue();
+
+
+        // Filter by Category
+        ObservableList<MonitorItem> filteredList = null;
+        if (categoryFilter != null) {
+            filteredList = filteredList.stream()
+                    .filter(item -> item.getCategory().equals(categoryFilter))
+                    .collect(Collectors.toCollection(FXCollections::observableArrayList));
+        }
+
+        // Filter by Status
+        if (statusFilter != null) {
+            filteredList = filteredList.stream()
+                    .filter(item -> item.getStatus().equals(statusFilter))
+                    .collect(Collectors.toCollection(FXCollections::observableArrayList));
+        }
+
+        // Filter by Last Updated Date
+        if (dateFilter != null) {
+            filteredList = filteredList.stream()
+                    .filter(item -> item.getLastUpdated().isEqual(dateFilter))
+                    .collect(Collectors.toCollection(FXCollections::observableArrayList));
+        }
+
+        monitorAlertTV.setItems(filteredList);
+    }
     }
 
-    @javafx.fxml.FXML
+    @FXML
     public void dashBoardButtonOnAction(ActionEvent actionEvent) {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(SSFApplication.class.getResource("/com/example/simulation_ssf/DashboardOfUsers/EquipmentManagerDashbord.fxml"));

@@ -14,10 +14,10 @@
       <Label layoutX="234.0" layoutY="6.0" prefHeight="34.0" prefWidth="117.0" style="-fx-background-color: cyan;" text="View Usage History " />
       <TableView fx:id="viewUsagehistoryTV" layoutX="12.0" layoutY="171.0" prefHeight="205.0" prefWidth="580.0">
         <columns>
-          <TableColumn fx:id="searchTextFieldTC" prefWidth="101.33331298828125" text="SearchTextField " />
-          <TableColumn fx:id="categoryComboTC" prefWidth="121.33331298828125" text="CategoryComboBox" />
+          <TableColumn fx:id="equipmentNameFieldTC" prefWidth="102.66665649414062" text="Equipment Name" />
+          <TableColumn fx:id="equipmentIDTC" prefWidth="120.0" text="Equipment ID " />
             <TableColumn fx:id="lastMaintenancedateTC" prefWidth="148.0" text="Last maintenance date" />
-            <TableColumn fx:id="assignedUnitTC" prefWidth="97.33331298828125" text="Assigned unit" />
+            <TableColumn fx:id="typeTC" prefWidth="97.33331298828125" text="Type" />
             <TableColumn fx:id="usageDurationTC" prefWidth="98.00006103515625" text="Usage duration" />
         </columns>
       </TableView>
