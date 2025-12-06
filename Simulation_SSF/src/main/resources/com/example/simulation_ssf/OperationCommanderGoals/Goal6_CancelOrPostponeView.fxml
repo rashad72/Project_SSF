@@ -24,8 +24,8 @@
                 <TableColumn fx:id="missionNameTableColumn" prefWidth="95.0" text="Mission Name" />
                 <TableColumn fx:id="objectiveTableColumn" prefWidth="64.0" text="Objective" />
                 <TableColumn fx:id="addressTableColumn" prefWidth="82.0" text="Address" />
-                <TableColumn fx:id="assignDateTableColumn" prefWidth="74.0" text="Assign Date" />
-                <TableColumn fx:id="teamCaptainIdTableColumn" prefWidth="100.0" text="Team Captain Id" />
+                <TableColumn fx:id="assignDateTableColumn" prefWidth="94.0" text="Assign Date" />
+                <TableColumn fx:id="teamIdTableColumn" text="Team Id" />
                 <TableColumn fx:id="currentStatusTableColumn" prefWidth="95.0" text="Current Status" />
             </columns>
         </TableView>

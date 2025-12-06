@@ -90,50 +90,17 @@ public class CO_Goal6_ViewController
         System.out.println("List loaded");
 
 
-
-//        File file = new File("FieldOperative.bin");
-//        operativeList.clear();
-//        if (!file.exists()) {
-//            System.out.println("File not found, returning empty list.");
-//            return;
-//        }
-//        try {
-//            FileInputStream fis = new FileInputStream(file);
-//            ObjectInputStream ois = new ObjectInputStream(fis);
-//            while (true) {
-//                try {
-//                    FieldOperative f = (FieldOperative) ois.readObject();
-//                    operativeList.add(f);
-//
-//                }catch (Exception e){
-//                    break;
-//                }
-//            }
-//        } catch (Exception e) {
-//            System.out.println(" Error: ");
-//        }
-//        fieldOperationTableView.getItems().addAll(operativeList);
-
-
-
-//            operativeList = (ArrayList<FieldOperative>) ois.readObject();
-//
-//            fieldOperationTableView.getItems().setAll(operativeList);
-//
-//            ois.close(); // Close the stream
-
-//        } catch (Exception e) {
-//            System.out.println(" Error: ");
-//
-//        }
-
-        //fieldOperationTableView.getItems().addAll(operativeList);
-
     }
 
 
     @javafx.fxml.FXML
     public void updateStatusButtonOnAction(ActionEvent actionEvent) {
+        int target = Integer.parseInt(operativeIdTF.getText());
+        for (FieldOperative f2: operativeList) {
+            if (f2.getEmployeeId() == target) {
+                f2.setAvailabilityStatus(NewStatusCB.getValue());
+            }
+        }
 
 
 
@@ -141,6 +108,12 @@ public class CO_Goal6_ViewController
 
     @javafx.fxml.FXML
     public void showButtonOnAction(ActionEvent actionEvent) {
+        int target = Integer.parseInt(operativeIdTF.getText());
+        for (FieldOperative f2: operativeList) {
+            if (f2.getEmployeeId() == target) {
+                operativeNameLabel.setText(f2.getName());
+            }
+        }
     }
 
     @javafx.fxml.FXML

@@ -17,15 +17,12 @@
             <TableColumn fx:id="typeTC" prefWidth="70.6666259765625" text="Type " />
             <TableColumn fx:id="quantityTC" prefWidth="75.0" text="Quantity " />
             <TableColumn fx:id="statusTC" prefWidth="75.0" text="Status" />
-            <TableColumn fx:id="notefieldsTC" prefWidth="75.0" text="Note Fields " />
         </columns>
       </TableView>
       <TextField fx:id="equipmentIDTF" layoutX="119.0" layoutY="34.0" />
       <Label layoutX="14.0" layoutY="34.0" prefHeight="25.0" prefWidth="105.0" text="Equipment ID " />
-      <TextField fx:id="notesFieldTF" layoutX="119.0" layoutY="70.0" />
-      <Label layoutX="14.0" layoutY="70.0" prefHeight="25.0" prefWidth="105.0" text="Notes Field " />
-      <Label layoutX="14.0" layoutY="118.0" prefHeight="25.0" prefWidth="105.0" text="Status Box " />
-      <ComboBox fx:id="statusBoxCB" layoutX="119.0" layoutY="118.0" prefWidth="150.0" />
+      <Label layoutX="14.0" layoutY="83.0" prefHeight="25.0" prefWidth="105.0" text="Status Box " />
+      <ComboBox fx:id="statusBoxCB" layoutX="119.0" layoutY="83.0" prefWidth="150.0" />
       <Button layoutX="133.0" layoutY="164.0" mnemonicParsing="false" onAction="#updateButtonOnAction" prefHeight="25.0" prefWidth="113.0" text="Update Button" />
       <Label fx:id="outputL" layoutX="374.0" layoutY="118.0" prefHeight="59.0" prefWidth="212.0" style="-fx-background-color: Yellow;" />
       <Label alignment="CENTER" layoutX="190.0" layoutY="1.0" prefHeight="25.0" prefWidth="175.0" style="-fx-background-color: cyan;" text="Equiment Manager Update " />

@@ -1,6 +1,7 @@
 package com.example.simulation_ssf.Controller.FXMLControllerForUser5;
 
 import com.example.simulation_ssf.SSFApplication;
+import com.example.simulation_ssf.nonUser.AppendableObjectOutputStream;
 import com.example.simulation_ssf.nonUser.Equipment;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
@@ -11,6 +12,9 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 
 
@@ -50,6 +54,29 @@ public class EM_Goal1_Controller
         equipmentList.add(equipment);
         System.out.println(equipment);
         outputL.setText("Equipment added successfully");
+
+        try {
+            File file = new File("Equipment.bin");
+            FileOutputStream fos = null;
+            ObjectOutputStream oos = null;
+
+            if (file.exists()){
+                fos = new FileOutputStream(file, true);
+
+                oos = new AppendableObjectOutputStream(fos);
+                System.out.println("appendable");
+            }
+            else {
+                fos = new FileOutputStream(file);
+                System.out.println("new");
+                oos = new ObjectOutputStream(fos);
+            }
+            oos.writeObject(equipment);
+            oos.close();
+            System.out.println("Object saved");
+        } catch (Exception e) {
+            System.out.println("Not saved");;
+        }
 
 
     }

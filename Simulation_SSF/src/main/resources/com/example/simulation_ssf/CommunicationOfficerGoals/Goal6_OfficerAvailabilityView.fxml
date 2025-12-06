@@ -19,8 +19,8 @@
         <TableView fx:id="fieldOperationTableView" layoutX="9.0" layoutY="83.0" prefHeight="200.0" prefWidth="586.0">
             <columns>
                 <TableColumn fx:id="operativeIdTableColumn" prefWidth="83.0" text="Operative ID" />
-                <TableColumn fx:id="nameTableColumn" prefWidth="98.0" text="Name" />
-                <TableColumn fx:id="teamCaptainFlagTableColumn" prefWidth="117.0" text="Team Captain" />
+                <TableColumn fx:id="nameTableColumn" prefWidth="130.0" text="Name" />
+                <TableColumn fx:id="teamCaptainFlagTableColumn" prefWidth="85.0" text="Team Captain" />
                 <TableColumn fx:id="presentAddressTableColumn" prefWidth="141.0" text="Present Address" />
             <TableColumn fx:id="currentStatusTableColumn" prefWidth="145.0" text="Availability" />
             </columns>

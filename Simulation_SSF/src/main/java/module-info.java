@@ -3,8 +3,11 @@ module com.example.simulation_ssf {
     requires javafx.fxml;
     requires javafx.graphics;
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> refs/remotes/origin/main
     opens com.example.simulation_ssf to javafx.fxml;
     // new add
     opens com.example.simulation_ssf.Controller to javafx.fxml;

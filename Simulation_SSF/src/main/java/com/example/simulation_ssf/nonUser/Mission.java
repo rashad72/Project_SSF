@@ -14,9 +14,9 @@ public class Mission implements Serializable {
     private String description;
     private String address;
     private boolean hasBackup = false;
-    private LocalDate completionDate;
+    private LocalDate actionDate;
 
-    public Mission(int missionId, String missionName, String missionType, LocalDate assignDate, String objective, String status, int assignTeamId, String description, String address, boolean hasBackup, LocalDate completionDate) {
+    public Mission(int missionId, String missionName, String missionType, LocalDate assignDate, String objective, String status, int assignTeamId, String description, String address, boolean hasBackup, LocalDate actionDate) {
         this.missionId = missionId;
         this.missionName = missionName;
         this.missionType = missionType;
@@ -27,7 +27,7 @@ public class Mission implements Serializable {
         this.description = description;
         this.address = address;
         this.hasBackup = false;
-        this.completionDate = null;
+        this.actionDate = null;
     }
 
     public int getMissionId() {
@@ -70,9 +70,8 @@ public class Mission implements Serializable {
         return hasBackup;
     }
 
-    public LocalDate getCompletionDate() {
-        return completionDate;
-    }
+
+
 
     public void setObjective(String objective) {
         Objective = objective;
@@ -97,8 +96,13 @@ public class Mission implements Serializable {
     public void setHasBackup(boolean hasBackup) {
         this.hasBackup = hasBackup;
     }
-    public void setCompletionDate(LocalDate completionDate) {
-        this.completionDate = completionDate;
+
+    public LocalDate getActionDate() {
+        return actionDate;
+    }
+
+    public void setActionDate(LocalDate actionDate) {
+        this.actionDate = actionDate;
     }
 
     @Override
@@ -114,7 +118,7 @@ public class Mission implements Serializable {
                 ", description='" + description + '\'' +
                 ", address='" + address + '\'' +
                 ", hasBackup=" + hasBackup +
-                ", completionDate=" + completionDate +
+                ", actionDate=" + actionDate +
                 '}';
     }
 }
