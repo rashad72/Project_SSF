@@ -1,42 +1,142 @@
 package com.example.simulation_ssf.Controller.FXMLControllerForUser3;
 
 import com.example.simulation_ssf.SSFApplication;
+import com.example.simulation_ssf.User.FieldOperative;
+import com.example.simulation_ssf.nonUser.AppendableObjectOutputStream;
+import com.example.simulation_ssf.nonUser.Message;
+import com.example.simulation_ssf.nonUser.Mission;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
+
+import java.io.*;
+import java.time.LocalDate;
+import java.util.ArrayList;
 
 public class CO_Goal6_ViewController
 {
     @javafx.fxml.FXML
-    private TableColumn operativeIdTableColumn;
+    private TableColumn<FieldOperative, Long> operativeIdTableColumn;
     @javafx.fxml.FXML
-    private TableColumn nameTableColumn;
+    private TableColumn<FieldOperative, String> nameTableColumn;
     @javafx.fxml.FXML
     private Label operativeNameLabel;
     @javafx.fxml.FXML
-    private TableColumn currentStatusTableColumn;
+    private TableColumn<FieldOperative, String> currentStatusTableColumn;
     @javafx.fxml.FXML
-    private ComboBox filterOperativeStatusCB;
+    private ComboBox<String> filterOperativeStatusCB;
     @javafx.fxml.FXML
-    private ComboBox NewStatusCB;
+    private ComboBox<String> NewStatusCB;
     @javafx.fxml.FXML
-    private TableColumn currentStatusTableColumn11;
+    private TableView<FieldOperative> fieldOperationTableView;
     @javafx.fxml.FXML
-    private TableView fieldOperationTableView;
-    @javafx.fxml.FXML
-    private TableColumn teamCaptainFlagTableColumn;
+    private TableColumn<FieldOperative, Boolean> teamCaptainFlagTableColumn;
     @javafx.fxml.FXML
     private TextField operativeIdTF;
+    private ArrayList<FieldOperative> operativeList = new ArrayList<>();
+    @javafx.fxml.FXML
+    private TableColumn<FieldOperative, String> presentAddressTableColumn;
+
 
     @javafx.fxml.FXML
     public void initialize() {
+        NewStatusCB.getItems().addAll("Available", "Busy", "Offline");
+        filterOperativeStatusCB.getItems().addAll("Available", "Busy", "Offline");
+        //  public FieldOperative(long nID, long phoneNo, String name, String mailAddress
+        //  , long employeeId, LocalDate joinDate, String presentAddress, boolean isCaptain, boolean inMission
+        //  , int currentMissionId, String availabilityStatus) {
+
+        operativeIdTableColumn.setCellValueFactory(new PropertyValueFactory<>("employeeId"));
+        nameTableColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
+        currentStatusTableColumn.setCellValueFactory(new PropertyValueFactory<>("availabilityStatus"));
+        teamCaptainFlagTableColumn.setCellValueFactory(new PropertyValueFactory<>("isCaptain"));
+        presentAddressTableColumn.setCellValueFactory(new PropertyValueFactory<>("presentAddress"));
+
+//        FieldOperative f = FieldOperative
+
+
+
+
+
+        File file = new File("FieldOperative.bin");
+        if (!file.exists()) {
+            System.out.println("File not found, returning empty list.");
+            return;
+        }
+        try {
+            FileInputStream fis = new FileInputStream(file);
+            ObjectInputStream ois = new ObjectInputStream(fis);
+            while (true){
+                try {
+                    FieldOperative f1 = (FieldOperative) ois.readObject();
+                    operativeList.add(f1);
+                } catch (EOFException e) {
+                    System.out.println("Bin file read!");
+                    break;
+                }
+            }
+        }
+        catch (Exception e) {
+            System.out.println("CRITICAL ERROR: " + e.getClass().getSimpleName());
+            System.out.println("Message: " + e.getMessage());
+            e.printStackTrace(); // This prints the red text in the consol
+            System.out.println("error");
+        }
+        fieldOperationTableView.getItems().addAll(operativeList);
+        System.out.println("List loaded");
+
+
+
+//        File file = new File("FieldOperative.bin");
+//        operativeList.clear();
+//        if (!file.exists()) {
+//            System.out.println("File not found, returning empty list.");
+//            return;
+//        }
+//        try {
+//            FileInputStream fis = new FileInputStream(file);
+//            ObjectInputStream ois = new ObjectInputStream(fis);
+//            while (true) {
+//                try {
+//                    FieldOperative f = (FieldOperative) ois.readObject();
+//                    operativeList.add(f);
+//
+//                }catch (Exception e){
+//                    break;
+//                }
+//            }
+//        } catch (Exception e) {
+//            System.out.println(" Error: ");
+//        }
+//        fieldOperationTableView.getItems().addAll(operativeList);
+
+
+
+//            operativeList = (ArrayList<FieldOperative>) ois.readObject();
+//
+//            fieldOperationTableView.getItems().setAll(operativeList);
+//
+//            ois.close(); // Close the stream
+
+//        } catch (Exception e) {
+//            System.out.println(" Error: ");
+//
+//        }
+
+        //fieldOperationTableView.getItems().addAll(operativeList);
+
     }
+
 
     @javafx.fxml.FXML
     public void updateStatusButtonOnAction(ActionEvent actionEvent) {
+
+
+
     }
 
     @javafx.fxml.FXML

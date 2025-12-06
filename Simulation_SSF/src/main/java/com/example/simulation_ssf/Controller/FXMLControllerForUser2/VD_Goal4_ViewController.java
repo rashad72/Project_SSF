@@ -14,11 +14,11 @@ import javafx.stage.Stage;
 public class VD_Goal4_ViewController
 {
     @javafx.fxml.FXML
-    private ComboBox ssccStatusComboBox;
+    private ComboBox<String> ssccStatusComboBox;
     @javafx.fxml.FXML
     private TextArea ssccNotesTextArea;
     @javafx.fxml.FXML
-    private ComboBox ssccCheckListItemsComboBox;
+    private ComboBox<String> ssccCheckListItemsComboBox;
     @javafx.fxml.FXML
     private DatePicker ssccCheckingDatePicker;
     @javafx.fxml.FXML
@@ -26,6 +26,8 @@ public class VD_Goal4_ViewController
 
     @javafx.fxml.FXML
     public void initialize() {
+        ssccStatusComboBox.getItems().addAll("Seatbelts","Break","Tires","Lights","Door Locks","Vehicle Document");
+        ssccCheckListItemsComboBox.getItems().addAll("OK","Need Repair","Critical");
     }
 
     @javafx.fxml.FXML

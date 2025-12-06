@@ -14,15 +14,15 @@
       <Label layoutX="223.0" layoutY="14.0" style="-fx-background-color: cyan;" text="Secure Communication Panel" />
        <DatePicker fx:id="filterDatePicker" layoutX="29.0" layoutY="67.0" />
        <TextField fx:id="senderIdTF" layoutX="151.0" layoutY="326.0" prefHeight="25.0" prefWidth="97.0" />
-       <TableView fx:id="fieldOperationTableView" layoutX="19.0" layoutY="137.0" prefHeight="185.0" prefWidth="578.0">
+       <TableView fx:id="messageTableView" layoutX="19.0" layoutY="137.0" prefHeight="185.0" prefWidth="578.0">
            <columns>
-               <TableColumn fx:id="missionIdTableColumn" prefWidth="66.0" text="Mission ID" />
-               <TableColumn fx:id="missionNameTableColumn" prefWidth="95.0" text="Mission Name" />
+               <TableColumn fx:id="messageIdTableColumn" prefWidth="76.0" text="Message ID" />
+               <TableColumn fx:id="senderIdTableColumn" prefWidth="85.0" text="Sender Id" />
                <TableColumn fx:id="missionTypeTableColumn" prefWidth="64.0" text="Type" />
-               <TableColumn fx:id="addressTableColumn" prefWidth="82.0" text="Address" />
-               <TableColumn fx:id="assignDateTableColumn" prefWidth="74.0" text="Assign Date" />
-               <TableColumn fx:id="teamCaptainIdTableColumn" prefWidth="100.0" text="Team Captain Id" />
+               <TableColumn fx:id="dateTableColumn" prefWidth="82.0" text="Date" />
+               <TableColumn fx:id="missionIdTableColumn" prefWidth="100.0" text="Mission ID" />
                <TableColumn fx:id="currentStatusTableColumn" prefWidth="95.0" text="Current Status" />
+               <TableColumn fx:id="subjectTableColumn" prefWidth="74.0" text="Subject" />
            </columns>
        </TableView>
        <ComboBox fx:id="filterMissionStatusCB" layoutX="415.0" layoutY="67.0" prefWidth="150.0" />

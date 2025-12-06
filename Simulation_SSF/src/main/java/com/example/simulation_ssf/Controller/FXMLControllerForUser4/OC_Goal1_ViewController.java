@@ -7,15 +7,18 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
+import java.io.EOFException;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.ObjectInputStream;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class OC_Goal1_ViewController
 {
-    @javafx.fxml.FXML
-    private TableColumn<Mission, Long> teamCaptainIdTableColumn;
     @javafx.fxml.FXML
     private TextField filterAddressTF;
     @javafx.fxml.FXML
@@ -41,10 +44,46 @@ public class OC_Goal1_ViewController
     @javafx.fxml.FXML
     private TableColumn<Mission, LocalDate> assignDateTableColumn;
     private ArrayList<Mission> missionList= new ArrayList<>();
+    @javafx.fxml.FXML
+    private TableColumn<Mission, Integer> teamIdTableColumn;
 
     @javafx.fxml.FXML
     public void initialize() {
+        filterMissionStatusCB.getItems().addAll("Rescue", "Surveillance", "Protection");
 
+
+        teamIdTableColumn.setCellValueFactory(new PropertyValueFactory<>("assignTeamId"));
+        assignDateTableColumn.setCellValueFactory(new PropertyValueFactory<>("assignDate"));
+        currentStatusTableColumn.setCellValueFactory(new PropertyValueFactory<>("status"));
+        addressTableColumn.setCellValueFactory(new PropertyValueFactory<>("address"));
+        missionIdTableColumn.setCellValueFactory(new PropertyValueFactory<>("missionId"));
+        missionNameTableColumn.setCellValueFactory(new PropertyValueFactory<>("missionName"));
+        objectiveTableColumn.setCellValueFactory(new PropertyValueFactory<>("objective"));
+
+
+
+        File file = new File("Mission.bin");
+        if (!file.exists()) {
+            System.out.println("File not found, returning empty list.");
+            return;
+        }
+        try {
+            FileInputStream fis = new FileInputStream(file);
+            ObjectInputStream ois = new ObjectInputStream(fis);
+            while (true){
+                try {
+                    Mission m1 = (Mission) ois.readObject();
+                    missionList.add(m1);
+                } catch (EOFException e) {
+                    System.out.println("Bin file read!");
+                    break;
+                }
+            }
+        }
+        catch (Exception e) {
+            System.out.println("error");
+        }
+        fieldOperationTableView.getItems().addAll(missionList);
 
 
     }

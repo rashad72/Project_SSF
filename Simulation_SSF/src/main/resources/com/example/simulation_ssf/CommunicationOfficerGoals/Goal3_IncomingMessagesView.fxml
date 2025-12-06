@@ -17,14 +17,13 @@
         </Label>
         <TableView fx:id="incomingMessagesTableView" layoutX="11.0" layoutY="51.0" prefHeight="200.0" prefWidth="578.0">
             <columns>
-                <TableColumn fx:id="messageIdTableColumn" prefWidth="81.0" text="Message ID" maxWidth="810.0"
-                             minWidth="30.0"/>
-                <TableColumn fx:id="senderTableColumn" text="Sender" />
-                <TableColumn fx:id="missionIdTableColumn" prefWidth="64.0" text="Mission ID" />
-                <TableColumn fx:id="missionTypeTableColumn" prefWidth="87.0" text="Mission Type" />
-                <TableColumn fx:id="subjectTableColumn" prefWidth="69.0" text="Subject" />
-                <TableColumn fx:id="teamCaptainIdTableColumn" prefWidth="100.0" text="Team Captain Id" />
+                <TableColumn fx:id="messageIdTableColumn" prefWidth="76.0" text="Message ID" />
+                <TableColumn fx:id="senderIdTableColumn" prefWidth="85.0" text="Sender Id" />
+                <TableColumn fx:id="missionTypeTableColumn" prefWidth="64.0" text="Type" />
+                <TableColumn fx:id="dateTableColumn" prefWidth="82.0" text="Date" />
+                <TableColumn fx:id="missionIdTableColumn" prefWidth="100.0" text="Mission ID" />
                 <TableColumn fx:id="currentStatusTableColumn" prefWidth="95.0" text="Current Status" />
+                <TableColumn fx:id="subjectTableColumn" prefWidth="74.0" text="Subject" />
             </columns>
         </TableView>
         <Button layoutX="120.0" layoutY="361.0" mnemonicParsing="false" onAction="#refreshIncomingMessageButtonOnAction" text="Refresh" />

@@ -1,8 +1,9 @@
 package com.example.simulation_ssf.User;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public abstract class Employee extends User{
+public abstract class Employee extends User implements Serializable {
     final protected long employeeId;
     final protected LocalDate joinDate;
     protected String presentAddress;

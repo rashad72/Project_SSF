@@ -16,16 +16,18 @@ public class FO_Goal6_ViewController
     @javafx.fxml.FXML
     private TextField vippTeamMembers;
     @javafx.fxml.FXML
-    private ComboBox vipTypeComboBox;
+    private ComboBox<String> vipTypeComboBox;
     @javafx.fxml.FXML
     private TextArea vippAssignedRouteTextField;
     @javafx.fxml.FXML
-    private ComboBox vippStatus;
+    private ComboBox<String> vippStatus;
     @javafx.fxml.FXML
     private TableView vippTableView;
 
     @javafx.fxml.FXML
     public void initialize() {
+        vipTypeComboBox.getItems().addAll("VVIP (Head of State)","VIP Category A","VIP Category B","Foreign Delegate","Military Official","Government Minister","Special Guest","High-Risk Individual");
+        vippStatus.getItems().addAll("Checkpoint Cleared","VIP En Route","VIP Arrived","Crowd Controlled","Threat Noticed","VIP Secured");
     }
 
     @javafx.fxml.FXML

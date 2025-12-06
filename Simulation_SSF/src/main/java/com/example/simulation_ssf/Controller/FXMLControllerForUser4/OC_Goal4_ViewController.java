@@ -1,6 +1,9 @@
 package com.example.simulation_ssf.Controller.FXMLControllerForUser4;
 
 import com.example.simulation_ssf.SSFApplication;
+import com.example.simulation_ssf.User.FieldOperative;
+import com.example.simulation_ssf.nonUser.AppendableObjectOutputStream;
+import com.example.simulation_ssf.nonUser.Team;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -8,42 +11,40 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.ObjectOutputStream;
+import java.util.ArrayList;
+
 public class OC_Goal4_ViewController
 {
+
     @javafx.fxml.FXML
-    private TextField proposalNoTF;
+    private TextField phoneTF;
     @javafx.fxml.FXML
-    private TableColumn missionTypeTableColumn;
+    private TextField nameTF;
     @javafx.fxml.FXML
-    private TextField filterAddressTF;
+    private TextField emailTF;
     @javafx.fxml.FXML
-    private TableColumn locationTableColumn;
+    private ComboBox<String> isCaptainCB;
     @javafx.fxml.FXML
-    private ComboBox filterMissionTypeCB;
+    private TextField addressTF;
     @javafx.fxml.FXML
-    private TableColumn dateTableColumn;
+    private DatePicker joinDatePicker;
     @javafx.fxml.FXML
-    private TableColumn situationTableColumn;
+    private TextField nIdTF;
     @javafx.fxml.FXML
-    private DatePicker assignDatePicker;
+    private TextField employeeIdTF;
     @javafx.fxml.FXML
-    private ComboBox decisionCB;
-    @javafx.fxml.FXML
-    private TextField commentTF;
-    @javafx.fxml.FXML
-    private TableColumn descriptionTableColumn;
-    @javafx.fxml.FXML
-    private TableView proposalTableView;
-    @javafx.fxml.FXML
-    private TableColumn proposalNoTableColumn;
+    private Label messageLabel;
+    private ArrayList<FieldOperative> operativeList = new ArrayList<>();
+
 
     @javafx.fxml.FXML
     public void initialize() {
+        isCaptainCB.getItems().addAll("Yes", "No");
     }
 
-    @javafx.fxml.FXML
-    public void confirmButtonOnAction(ActionEvent actionEvent) {
-    }
 
     @javafx.fxml.FXML
     public void backToDashboardButtonOnAction(ActionEvent actionEvent) {
@@ -61,6 +62,44 @@ public class OC_Goal4_ViewController
     }
 
     @javafx.fxml.FXML
-    public void filterButtonOnAction(ActionEvent actionEvent) {
+    public void createOperativeButtonOnAction(ActionEvent actionEvent) {
+        boolean captainFlag = false;
+        if (isCaptainCB.getValue().equals("Yes")){
+             captainFlag = true;
+        }
+
+        //    public FieldOperative(long nID, long phoneNo, String name, String mailAddress, long employeeId, LocalDate joinDate,
+        //    String presentAddress, boolean isCaptain, boolean inMission, int currentMissionId, String availabilityStatus) {
+        FieldOperative f = new FieldOperative(Long.parseLong(nIdTF.getText()),Long.parseLong(phoneTF.getText()),nameTF.getText(),
+                emailTF.getText(),Long.parseLong(employeeIdTF.getText()), joinDatePicker.getValue(),addressTF.getText(),captainFlag, false,
+                00,"Available"
+                );
+
+        operativeList.add(f);
+        System.out.println(f);
+
+        try {
+            File file = new File("FieldOperative.bin");
+            FileOutputStream fos = null;
+            ObjectOutputStream oos = null;
+
+            if (file.exists()){
+                fos = new FileOutputStream(file, true);
+
+                oos = new AppendableObjectOutputStream(fos);
+                System.out.println("appendable");
+            }
+            else {
+                fos = new FileOutputStream(file);
+                System.out.println("new");
+                oos = new ObjectOutputStream(fos);
+            }
+            oos.writeObject(f);
+            oos.close();
+            System.out.println("Object saved");
+        } catch (Exception e) {
+            System.out.println("Not saved");;
+        }
+
     }
 }

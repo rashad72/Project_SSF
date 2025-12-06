@@ -9,7 +9,7 @@
       <Label layoutX="205.0" layoutY="14.0" prefHeight="35.0" prefWidth="190.0" style="-fx-background-color: cyan;" text="Communication Officer Dashboard" />
       <Button fx:id="dashboardButton" layoutX="34.0" layoutY="74.0" mnemonicParsing="false" onAction="#monitorFieldOperationsButtonOnAction" text="Monitor Field Operations" />
       <Button layoutX="226.0" layoutY="74.0" mnemonicParsing="false" onAction="#communicationPanelButtonOnAction" prefHeight="25.0" prefWidth="149.0" text="Communication Panel" />
-      <Button layoutX="34.0" layoutY="176.0" mnemonicParsing="false" onAction="#generateReportButtonOnAction" prefHeight="25.0" prefWidth="149.0" text="Generate Report" />
+      <Button layoutX="34.0" layoutY="176.0" mnemonicParsing="false" onAction="#alertGenerateButtonOnAction" prefHeight="25.0" prefWidth="149.0" text="Alert Generate" />
       <Button layoutX="409.0" layoutY="74.0" mnemonicParsing="false" onAction="#incomingMessagesButtonOnAction" prefHeight="25.0" prefWidth="149.0" text="Incoming Messages" />
       <Button layoutX="226.0" layoutY="176.0" mnemonicParsing="false" onAction="#verifyLogsButtonOnAction" prefHeight="25.0" prefWidth="149.0" text="Verify Logs" />
       <Button layoutX="21.0" layoutY="262.0" mnemonicParsing="false" onAction="#notificationsButtonOnAction" prefHeight="25.0" prefWidth="176.0" text="Mission Alerts &amp; Notifications" />
