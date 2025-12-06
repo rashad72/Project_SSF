@@ -90,20 +90,6 @@ public class OperationCommanderDashboardController
         }
     }
 
-    @javafx.fxml.FXML
-    public void missionProposalsButtonOnAction(ActionEvent actionEvent) {
-        try {
-            FXMLLoader fxmlLoader = new FXMLLoader(SSFApplication.class.getResource("/com/example/simulation_ssf/OperationCommanderGoals/Goal4_MissionProposalsView.fxml"));
-            Scene GoalScene = new Scene(fxmlLoader.load());
-            Stage currentStage =(Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-            //Stage currentStage = (Stage)dashboardButton.getScene().getWindow();
-            currentStage.setScene(GoalScene);
-
-            currentStage.show();
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
-    }
 
     @javafx.fxml.FXML
     public void cancelOrPostponeMissionButtonOnAction(ActionEvent actionEvent) {
@@ -139,6 +125,21 @@ public class OperationCommanderDashboardController
     public void markMissionCompletedButtonOnAction(ActionEvent actionEvent) {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(SSFApplication.class.getResource("/com/example/simulation_ssf/OperationCommanderGoals/Goal5_CompleteMissionView.fxml"));
+            Scene GoalScene = new Scene(fxmlLoader.load());
+            Stage currentStage =(Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+            //Stage currentStage = (Stage)dashboardButton.getScene().getWindow();
+            currentStage.setScene(GoalScene);
+
+            currentStage.show();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    @javafx.fxml.FXML
+    public void registerOperativeButtonOnAction(ActionEvent actionEvent) {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(SSFApplication.class.getResource("/com/example/simulation_ssf/OperationCommanderGoals/Goal4_RegisterOperativeView.fxml"));
             Scene GoalScene = new Scene(fxmlLoader.load());
             Stage currentStage =(Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
             //Stage currentStage = (Stage)dashboardButton.getScene().getWindow();

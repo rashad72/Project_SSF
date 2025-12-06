@@ -22,27 +22,27 @@ import java.util.ArrayList;
 public class CO_Goal3_ViewController
 {
     @javafx.fxml.FXML
-    private TableColumn messageIdTableColumn;
+    private TableColumn<Message, Integer> messageIdTableColumn;
     @javafx.fxml.FXML
-    private TableColumn missionIdTableColumn;
+    private TableColumn<Message, Integer> missionIdTableColumn;
     @javafx.fxml.FXML
-    private TableColumn missionTypeTableColumn;
+    private TableColumn<Message, String> missionTypeTableColumn;
     @javafx.fxml.FXML
     private TextField messageIdTF;
     @javafx.fxml.FXML
-    private TableView incomingMessagesTableView;
+    private TableView<Message> incomingMessagesTableView;
     @javafx.fxml.FXML
-    private TableColumn subjectTableColumn;
+    private TableColumn<Message, String> subjectTableColumn;
     @javafx.fxml.FXML
-    private TableColumn currentStatusTableColumn;
+    private TableColumn<Message, String> currentStatusTableColumn;
     @javafx.fxml.FXML
     private Label messageContentLabel;
     @javafx.fxml.FXML
     private Label senderNameLabel;
     @javafx.fxml.FXML
-    private TableColumn senderIdTableColumn;
+    private TableColumn<Message, String> senderIdTableColumn;
     @javafx.fxml.FXML
-    private TableColumn dateTableColumn;
+    private TableColumn<Message, String> dateTableColumn;
     private ArrayList<Message> messageList = new ArrayList<>();
 
 

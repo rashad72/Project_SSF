@@ -4,10 +4,10 @@ import java.io.Serializable;
 import java.time.LocalDate;
 
 public class FieldOperative extends Employee implements Serializable {
-    private boolean isCaptain = false;
-    private boolean inMission = false;
-    private int currentMissionId = 0;
-    private String availabilityStatus = "Available"; // "Available", "Busy", "Offline"
+    private boolean isCaptain  ;
+    private boolean inMission  ;
+    private int currentMissionId  ;
+    private String availabilityStatus ; // "Available", "Busy", "Offline"
 
     public FieldOperative(long nID, long phoneNo, String name, String mailAddress, long employeeId, LocalDate joinDate, String presentAddress, boolean isCaptain, boolean inMission, int currentMissionId, String availabilityStatus) {
         super(nID, phoneNo, name, mailAddress, employeeId, joinDate, presentAddress);
@@ -17,11 +17,11 @@ public class FieldOperative extends Employee implements Serializable {
         this.availabilityStatus = availabilityStatus;
     }
 
-    public boolean isCaptain() {
+    public boolean getIsCaptain() {
         return isCaptain;
     }
 
-    public boolean isInMission() {
+    public boolean getInMission() {
         return inMission;
     }
 

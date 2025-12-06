@@ -8,6 +8,7 @@ module com.example.simulation_ssf {
     // new add
     opens com.example.simulation_ssf.Controller to javafx.fxml;
     opens com.example.simulation_ssf.nonUser to javafx.base;
+    opens com.example.simulation_ssf.User to javafx.base;
     //new
     opens com.example.simulation_ssf.Controller.FXMLControllerForUser1 to javafx.fxml;
     opens com.example.simulation_ssf.Controller.FXMLControllerForUser2 to javafx.fxml;
