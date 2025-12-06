@@ -12,6 +12,9 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
 import java.io.EOFException;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.ObjectInputStream;
 import java.util.ArrayList;
 
 public class EM_Goal2_Controller
@@ -51,7 +54,7 @@ public class EM_Goal2_Controller
         statusTC.setCellValueFactory(new PropertyValueFactory<>("status"));
         equimentNameTC.setCellValueFactory(new PropertyValueFactory<>("equipmentName"));
 
-        File file = new File("equipment.bin");
+        File file = new File("Equipment.bin");
         if (!file.exists()) {
             System.out.println("File not found, returning empty list.");
             return;
@@ -81,7 +84,7 @@ public class EM_Goal2_Controller
 
 
 
-    }
+
 
     @javafx.fxml.FXML
     public void updateButtonOnAction(ActionEvent actionEvent) {

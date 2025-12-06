@@ -42,56 +42,7 @@ public class EM_Goal4_Controller {
     @FXML
     public void removeButtonOnAction(ActionEvent actionEvent) {
 
-<<<<<<< HEAD
-=======
-        if (idText.isEmpty()) {
-            showAlert("Error", "Please enter Equipment ID");
-            return;
-        }
 
-        int id;
-        try {
-            id = Integer.parseInt(idText);
-        } catch (Exception e) {
-            showAlert("Error", "Invalid ID format");
-            return;
-        }
-
-        Equipment selected = null;
-
-        Equipment[] equipmentList = new Equipment[0];
-        for (Equipment eq : equipmentList) {
-            if (eq.getEquipmentID() == id) {
-                selected = eq;
-                break;
-            }
-        }
-
-        if (selected == null) {
-            showAlert("Not Found", "No equipment found with this ID");
-            return;
-        }
-
-        if (!(selected.getStatus().equalsIgnoreCase("Damaged") ||
-                selected.getStatus().equalsIgnoreCase("Expired"))) {
-
-            showAlert("Action Blocked", "Only Damaged or Expired items can be removed.");
-            return;
-        }
-
-        // Show confirmation alert
-        Alert confirm = new Alert(Alert.AlertType.CONFIRMATION);
-        confirm.setTitle("Confirm Delete");
-        confirm.setHeaderText("Are you sure?");
-        confirm.setContentText("Delete equipment: " + selected.getEquipmentName());
-
-//        confirm.showAndWait().ifPresent(response -> {
-//            if (response == ButtonType.OK) {
-//                equipmentList.remove(selected);
-//                removeTV.refresh();
-//                showAlert("Success", "Equipment removed successfully");
-//            }
-//        });
     }
 
     private void showAlert(String title, String message) {
@@ -115,6 +66,5 @@ public class EM_Goal4_Controller {
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
->>>>>>> 3d7599860b14976e5da450b51b4f1786533e52c0
     }
 }

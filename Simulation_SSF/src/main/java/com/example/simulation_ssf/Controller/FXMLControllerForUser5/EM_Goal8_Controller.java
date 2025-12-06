@@ -125,7 +125,7 @@ public class EM_Goal8_Controller {
         System.out.println(equipmentList);
 
         try {
-            File file  = new File("equipment.bin");
+            File file  = new File("Equipment.bin");
             FileOutputStream fos = null;
             ObjectOutputStream oos = null;
 
