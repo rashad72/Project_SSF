@@ -3,6 +3,9 @@ module com.example.simulation_ssf {
     requires javafx.fxml;
     requires javafx.graphics;
 
+    requires java.desktop;
+
+
 
     opens com.example.simulation_ssf to javafx.fxml;
     // new add

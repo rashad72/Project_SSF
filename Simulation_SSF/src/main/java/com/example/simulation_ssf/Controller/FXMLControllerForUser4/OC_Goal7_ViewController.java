@@ -1,44 +1,96 @@
 package com.example.simulation_ssf.Controller.FXMLControllerForUser4;
 
 import com.example.simulation_ssf.SSFApplication;
+import com.example.simulation_ssf.nonUser.Mission;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
+
+import java.io.EOFException;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.ObjectInputStream;
+import java.time.LocalDate;
+import java.util.ArrayList;
 
 public class OC_Goal7_ViewController
 {
     @javafx.fxml.FXML
-    private TableColumn teamCaptainIdTableColumn;
+    private TableView<Mission> completedMissionTableView;
     @javafx.fxml.FXML
-    private TableView completedMissionTableView;
+    private TableColumn<Mission, String> objectiveTableColumn;
     @javafx.fxml.FXML
-    private TableColumn objectiveTableColumn;
+    private TableColumn<Mission, LocalDate> completedDateTableColumn;
     @javafx.fxml.FXML
-    private TableColumn completedDateTableColumn;
+    private TableColumn<Mission, String> missionNameTableColumn;
     @javafx.fxml.FXML
-    private TableColumn missionNameTableColumn;
-    @javafx.fxml.FXML
-    private ComboBox filterMissionStatusCB;
+    private ComboBox< String> filterMissionStatusCB;
     @javafx.fxml.FXML
     private DatePicker filterFromDatePicker;
     @javafx.fxml.FXML
-    private TableColumn missionIdTableColumn;
+    private TableColumn<Mission, Integer> missionIdTableColumn;
     @javafx.fxml.FXML
     private TextField messageTF;
     @javafx.fxml.FXML
-    private TableColumn addressTableColumn;
+    private TableColumn<Mission, String> addressTableColumn;
     @javafx.fxml.FXML
     private TextField missionIdTF;
     @javafx.fxml.FXML
     private TextField filterMissionIdTF;
     @javafx.fxml.FXML
     private TextField descriptionUpdateTF;
+    @javafx.fxml.FXML
+    private TableColumn<Mission, Integer> teamIdTableColumn;
+    private ArrayList<Mission> missionList= new ArrayList<>();
+
 
     @javafx.fxml.FXML
     public void initialize() {
+        filterMissionStatusCB.getItems().addAll("Ongoing", "Completed", "Cancelled", "Postponed");
+
+
+        teamIdTableColumn.setCellValueFactory(new PropertyValueFactory<>("assignTeamId"));
+
+        completedDateTableColumn.setCellValueFactory(new  PropertyValueFactory<>("actionDate"));
+        addressTableColumn.setCellValueFactory(new PropertyValueFactory<>("address"));
+        missionIdTableColumn.setCellValueFactory(new PropertyValueFactory<>("missionId"));
+        missionNameTableColumn.setCellValueFactory(new PropertyValueFactory<>("missionName"));
+        objectiveTableColumn.setCellValueFactory(new PropertyValueFactory<>("objective"));
+
+
+        File file = new File("Mission.bin");
+        if (!file.exists()) {
+            System.out.println("File not found, returning empty list.");
+            return;
+        }
+        try {
+            FileInputStream fis = new FileInputStream(file);
+            ObjectInputStream ois = new ObjectInputStream(fis);
+            while (true) {
+                try {
+                    Mission m1 = (Mission) ois.readObject();
+                    missionList.add(m1);
+                } catch (EOFException e) {
+                    System.out.println("Bin file read!");
+                    break;
+                }
+            }
+        } catch (Exception e) {
+            System.out.println("error");
+        }
+        ArrayList<Mission> tempList = new ArrayList<>();
+        for (Mission m : missionList) {
+            if (m.getStatus().equals("Completed")) {
+                tempList.add(m);
+            }
+
+
+            completedMissionTableView.getItems().addAll(tempList);
+        }
     }
 
     @javafx.fxml.FXML

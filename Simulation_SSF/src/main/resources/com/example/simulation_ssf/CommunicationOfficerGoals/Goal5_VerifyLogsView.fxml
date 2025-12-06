@@ -22,7 +22,7 @@
                 <TableColumn fx:id="missionIdTableColumn" prefWidth="64.0" text="Mission ID" />
                 <TableColumn fx:id="missionTypeTableColumn" prefWidth="87.0" text="Mission Type" />
                 <TableColumn fx:id="dateTableColumn" prefWidth="69.0" text="Date" />
-                <TableColumn fx:id="teamCaptainIdTableColumn" prefWidth="100.0" text="Team Captain Id" />
+                <TableColumn fx:id="subjectTableColumn" prefWidth="100.0" text="Subject" />
                 <TableColumn fx:id="currentStatusTableColumn" prefWidth="95.0" text="Current Status" />
             </columns>
         </TableView>
