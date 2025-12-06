@@ -85,13 +85,13 @@ public class EM_Goal4_Controller
         confirm.setHeaderText("Are you sure?");
         confirm.setContentText("Delete equipment: " + selected.getEquipmentName());
 
-        confirm.showAndWait().ifPresent(response -> {
-            if (response == ButtonType.OK) {
-                equipmentList.remove(selected);
-                removeTV.refresh();
-                showAlert("Success", "Equipment removed successfully");
-            }
-        });
+//        confirm.showAndWait().ifPresent(response -> {
+//            if (response == ButtonType.OK) {
+//                equipmentList.remove(selected);
+//                removeTV.refresh();
+//                showAlert("Success", "Equipment removed successfully");
+//            }
+//        });
     }
 
     private void showAlert(String title, String message) {

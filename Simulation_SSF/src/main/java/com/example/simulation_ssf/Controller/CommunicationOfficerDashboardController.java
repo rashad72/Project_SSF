@@ -129,16 +129,15 @@ public class CommunicationOfficerDashboardController
 
     @javafx.fxml.FXML
     public void incomingMessagesButtonOnAction(ActionEvent actionEvent) {
+
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(SSFApplication.class.getResource("/com/example/simulation_ssf/CommunicationOfficerGoals/Goal3_IncomingMessagesView.fxml"));
             Scene Goal3Scene = new Scene(fxmlLoader.load());
             Stage currentStage =(Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-//            Stage currentStage = (Stage) dashboardButton.getScene().getWindow();
+            //Stage currentStage = (Stage)dashboardButton.getScene().getWindow();
             currentStage.setScene(Goal3Scene);
+
             currentStage.show();
-
-
-
         } catch (Exception e) {
             throw new RuntimeException(e);
         }

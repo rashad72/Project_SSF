@@ -110,6 +110,14 @@ public class OC_Goal6_ViewController
 
     @javafx.fxml.FXML
     public void applyButtonOnAction(ActionEvent actionEvent) {
+        int target = Integer.parseInt(missionIdTF.getText());
+        for (Mission m2: missionList) {
+            if (m2.getMissionId() == target) {
+                m2.setStatus(actionCB.getValue());
+            }
+
+
+        }
     }
 
     @javafx.fxml.FXML

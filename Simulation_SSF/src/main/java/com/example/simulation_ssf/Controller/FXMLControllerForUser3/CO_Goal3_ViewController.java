@@ -90,10 +90,24 @@ public class CO_Goal3_ViewController
 
     @javafx.fxml.FXML
     public void markMessageAsAcknowledgeButtonOnAction(ActionEvent actionEvent) {
+        int target = Integer.parseInt(messageIdTF.getText());
+        for (Message m2: messageList) {
+            if (m2.getMessageId() == target) {
+                m2.setStatus("READ");
+
+            }
+        }
     }
 
     @javafx.fxml.FXML
     public void viewMessageButtonOnAction(ActionEvent actionEvent) {
+        int target = Integer.parseInt(messageIdTF.getText());
+        for (Message m2: messageList){
+            if (m2.getMessageId() == target){
+                messageContentLabel.setText(m2.getContent());
+                senderNameLabel.setText(Integer.toString(m2.getSenderId()));
+            }
+        }
     }
 
     @javafx.fxml.FXML
