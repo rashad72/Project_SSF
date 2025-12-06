@@ -105,13 +105,29 @@ public class CO_Goal5_ViewController
 
     @javafx.fxml.FXML
     public void showLogButtonOnAction(ActionEvent actionEvent) {
+        int target = Integer.parseInt(messageIdTF.getText());
+        for (Message m2: logList) {
+            if (m2.getMessageId() == target) {
+                senderNameLabel.setText(Integer.toString(m2.getSenderId()));
+                logContentLabel.setText(m2.getContent());
+            }
+
+        }
     }
 
     @javafx.fxml.FXML
     public void markMessageAsVerifiedButtonOnAction(ActionEvent actionEvent) {
+        int target = Integer.parseInt(messageIdTF.getText());
+        for (Message m2: logList) {
+            if (m2.getMessageId() == target) {
+                m2.setStatus("Verified");
+
+            }
+        }
     }
 
     @javafx.fxml.FXML
     public void refreshIncomingMessageButtonOnAction(ActionEvent actionEvent) {
+        messageIdTF.clear();
     }
 }

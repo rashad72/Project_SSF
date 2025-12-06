@@ -1,5 +1,7 @@
 package com.example.simulation_ssf.User;
 
+import javafx.scene.control.Alert;
+
 import java.io.Serializable;
 
 public abstract class User implements Serializable {
@@ -56,6 +58,12 @@ public abstract class User implements Serializable {
 
 
         return true;
+
+    }
+    public void errorAlert(String a ){
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setContentText(a);
+        alert.showAndWait();
 
     }
 

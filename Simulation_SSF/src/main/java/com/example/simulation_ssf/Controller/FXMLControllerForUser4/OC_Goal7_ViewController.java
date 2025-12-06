@@ -1,6 +1,7 @@
 package com.example.simulation_ssf.Controller.FXMLControllerForUser4;
 
 import com.example.simulation_ssf.SSFApplication;
+import com.example.simulation_ssf.nonUser.Message;
 import com.example.simulation_ssf.nonUser.Mission;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
@@ -99,6 +100,13 @@ public class OC_Goal7_ViewController
 
     @javafx.fxml.FXML
     public void reopenMissionButtonOnAction(ActionEvent actionEvent) {
+        int target = Integer.parseInt(missionIdTF.getText());
+        for (Mission m2 : missionList) {
+            if (m2.getMissionId() == target) {
+                m2.setStatus("Re-opened");
+
+            }
+        }
     }
 
     @javafx.fxml.FXML

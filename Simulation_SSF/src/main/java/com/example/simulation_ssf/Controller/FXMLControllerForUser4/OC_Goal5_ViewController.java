@@ -1,6 +1,7 @@
 package com.example.simulation_ssf.Controller.FXMLControllerForUser4;
 
 import com.example.simulation_ssf.SSFApplication;
+import com.example.simulation_ssf.nonUser.Message;
 import com.example.simulation_ssf.nonUser.Mission;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
@@ -114,7 +115,13 @@ public class OC_Goal5_ViewController
 
     @javafx.fxml.FXML
     public void markAsCompletedButtonOnAction(ActionEvent actionEvent) {
+        int target = Integer.parseInt(missionIdTF.getText());
+        for (Mission m2 : missionList) {
+            if (m2.getMissionId() == target){
+                m2.setStatus("Completed");
+        }
     }
+        }
 
     @javafx.fxml.FXML
     public void filterAndLoadButtonOnAction(ActionEvent actionEvent) {

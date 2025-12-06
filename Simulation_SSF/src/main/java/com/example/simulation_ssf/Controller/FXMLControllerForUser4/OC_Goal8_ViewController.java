@@ -1,6 +1,7 @@
 package com.example.simulation_ssf.Controller.FXMLControllerForUser4;
 
 import com.example.simulation_ssf.SSFApplication;
+import com.example.simulation_ssf.nonUser.Message;
 import com.example.simulation_ssf.nonUser.Mission;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
@@ -10,10 +11,7 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
-import java.io.EOFException;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.ObjectInputStream;
+import java.io.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
@@ -97,7 +95,20 @@ public class OC_Goal8_ViewController
 
     @javafx.fxml.FXML
     public void confirmButtonOnAction(ActionEvent actionEvent) {
-    }
+        if (missionIdTF.getText().isEmpty()) {
+            errorAlert("Please enter a Mission ID.");
+
+            System.out.println("Please enter a Mission ID.");
+            return;
+        }
+        int target = Integer.parseInt(missionIdTF.getText());
+        for (Mission m2: missionList) {
+            if (m2.getMissionId() == target){
+            m2.setHasBackup(true);
+            }
+        }
+
+        }
 
     @javafx.fxml.FXML
     public void backToDashboardButtonOnAction(ActionEvent actionEvent) {
@@ -117,5 +128,18 @@ public class OC_Goal8_ViewController
 
     @javafx.fxml.FXML
     public void filterAndLoadButtonOnAction(ActionEvent actionEvent) {
+    }
+//    private void writeMissionsToFile(ArrayList<Mission> list) {
+//        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(Mission.Bi))) {
+//            oos.writeObject(list);
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//    }
+
+    public void errorAlert(String a ){
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setContentText(a);
+        alert.showAndWait();
     }
 }
