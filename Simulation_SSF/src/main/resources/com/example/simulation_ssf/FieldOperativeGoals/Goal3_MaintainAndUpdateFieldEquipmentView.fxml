@@ -27,14 +27,14 @@
       <Label layoutX="543.0" layoutY="148.0" text="Last Maintenance" />
       <TableView fx:id="mufeTableView" layoutX="125.0" layoutY="388.0" prefHeight="230.0" prefWidth="696.0">
         <columns>
-          <TableColumn prefWidth="158.0" text="Equipement " />
-          <TableColumn prefWidth="179.0" text="Equipement ID" />
-            <TableColumn prefWidth="179.0" text="Last Maintenance" />
-            <TableColumn prefWidth="179.0" text="Status" />
+          <TableColumn fx:id="eqTC" prefWidth="158.0" text="Equipement " />
+          <TableColumn fx:id="eqIdTC" prefWidth="179.0" text="Equipement ID" />
+            <TableColumn fx:id="lmTC" prefWidth="179.0" text="Last Maintenance" />
+            <TableColumn fx:id="statusTC" prefWidth="179.0" text="Status" />
         </columns>
       </TableView>
-      <Button layoutX="395.0" layoutY="324.0" mnemonicParsing="false" onAction="#mufeTableViewButtonOnAction" prefHeight="49.0" prefWidth="138.0" text="Show In Table" />
-      <Button layoutX="698.0" layoutY="239.0" mnemonicParsing="false" onAction="#mufeSubmitStatusButtonOnAction" prefHeight="36.0" prefWidth="138.0" text="Submit Status" />
-      <Button layoutX="713.0" layoutY="660.0" mnemonicParsing="false" onAction="#mufeToDashboardButtonOnAction" prefHeight="36.0" prefWidth="129.0" text="Dashboard" />
+      <Button layoutX="405.0" layoutY="266.0" mnemonicParsing="false" onAction="#mufeTableViewButtonOnAction" prefHeight="49.0" prefWidth="138.0" text="Show In Table" />
+      <Button layoutX="405.0" layoutY="646.0" mnemonicParsing="false" onAction="#mufeSubmitStatusButtonOnAction" prefHeight="36.0" prefWidth="138.0" text="Submit Status" />
+      <Button layoutX="707.0" layoutY="676.0" mnemonicParsing="false" onAction="#mufeToDashboardButtonOnAction" prefHeight="36.0" prefWidth="129.0" text="Dashboard" />
    </children>
 </AnchorPane>

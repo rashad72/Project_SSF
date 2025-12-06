@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
@@ -18,11 +19,11 @@
       </Label>
       <DatePicker fx:id="oGSSPDatePicker" layoutX="159.0" layoutY="159.0" />
       <TextField fx:id="oGSSPmissionIDTextField" layoutX="159.0" layoutY="116.0" prefHeight="25.0" prefWidth="174.0" />
-      <TableView layoutX="120.0" layoutY="289.0" prefHeight="200.0" prefWidth="569.0">
+      <TableView fx:id="oGSSPTV" layoutX="120.0" layoutY="289.0" prefHeight="200.0" prefWidth="569.0">
         <columns>
-          <TableColumn prefWidth="182.0" text="Mission ID" />
-          <TableColumn minWidth="0.0" prefWidth="194.0" text="Date" />
-            <TableColumn prefWidth="192.0" text="Status" />
+          <TableColumn fx:id="missionIdTC" prefWidth="182.0" text="Mission ID" />
+          <TableColumn fx:id="dateTC" minWidth="0.0" prefWidth="194.0" text="Date" />
+            <TableColumn fx:id="statusTC" prefWidth="192.0" text="Status" />
         </columns>
       </TableView>
       <Button layoutX="591.0" layoutY="509.0" mnemonicParsing="false" onAction="#oGSSPSubmitReportButtonOnAction" prefHeight="25.0" prefWidth="145.0" text="Submit Report" />
@@ -31,5 +32,7 @@
       <Button layoutX="230.0" layoutY="242.0" mnemonicParsing="false" onAction="#oGSSPsurveillanceButtonOnAction" prefHeight="25.0" prefWidth="331.0" text="Surveillance" />
       <Button layoutX="273.0" layoutY="509.0" mnemonicParsing="false" onAction="#oGSSPStartPatrolButtonOnAction" prefHeight="25.0" prefWidth="245.0" text="Start Patrol" />
       <Button layoutX="598.0" layoutY="563.0" mnemonicParsing="false" onAction="#oGSSPtoDashboardButtonOnAction" prefHeight="25.0" prefWidth="145.0" text="Dashboard" />
+      <ComboBox fx:id="statusCombobox" layoutX="533.0" layoutY="116.0" prefWidth="150.0" />
+      <Label layoutX="479.0" layoutY="120.0" text="Status" />
    </children>
 </AnchorPane>

@@ -28,10 +28,10 @@
       <Label layoutX="149.0" layoutY="252.0" text="Evacuation Date" />
       <TableView fx:id="eertTableView" layoutX="162.0" layoutY="478.0" prefHeight="200.0" prefWidth="698.0">
         <columns>
-          <TableColumn prefWidth="237.0" text="Evacuation Location" />
-          <TableColumn prefWidth="129.0" text="Number Of People" />
-            <TableColumn prefWidth="117.0" text="Evacuation Type" />
-            <TableColumn prefWidth="213.0" text="Evacuation Date" />
+          <TableColumn fx:id="elTC" prefWidth="237.0" text="Evacuation Location" />
+          <TableColumn fx:id="nopTC" prefWidth="129.0" text="Number Of People" />
+            <TableColumn fx:id="etTC" prefWidth="117.0" text="Evacuation Type" />
+            <TableColumn fx:id="edTC" prefWidth="213.0" text="Evacuation Date" />
         </columns>
       </TableView>
       <Button layoutX="279.0" layoutY="310.0" mnemonicParsing="false" onAction="#eertSubmitButtonOnAction" text="Submit" />

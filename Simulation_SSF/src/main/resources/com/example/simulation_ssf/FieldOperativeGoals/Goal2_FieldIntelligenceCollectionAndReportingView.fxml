@@ -29,11 +29,11 @@
       <TextArea fx:id="fICRThreatDescriptionTextField" layoutX="309.0" layoutY="224.0" prefHeight="113.0" prefWidth="286.0" />
       <TableView fx:id="fICRTableView" layoutX="90.0" layoutY="420.0" prefHeight="200.0" prefWidth="709.0">
         <columns>
-          <TableColumn prefWidth="119.0" text="Threat Type" />
-          <TableColumn prefWidth="206.0" text="Suspect Information" />
-            <TableColumn prefWidth="132.0" text="Location" />
-            <TableColumn prefWidth="99.0" text="Severity Level" />
-            <TableColumn prefWidth="152.0" text="Threat Description" />
+          <TableColumn fx:id="ttTC" prefWidth="119.0" text="Threat Type" />
+          <TableColumn fx:id="siTC" prefWidth="206.0" text="Suspect Information" />
+            <TableColumn fx:id="lTC" prefWidth="132.0" text="Location" />
+            <TableColumn fx:id="slTC" prefWidth="99.0" text="Severity Level" />
+            <TableColumn fx:id="tdTC" prefWidth="152.0" text="Threat Description" />
         </columns>
       </TableView>
       <Button layoutX="309.0" layoutY="347.0" mnemonicParsing="false" onAction="#fICRuploadEVandShowTableButtonOnAction" prefHeight="43.0" prefWidth="286.0" text="Upload Evidence &amp; Show in Table" />

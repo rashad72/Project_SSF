@@ -88,7 +88,7 @@ public class VD_Goal5_ViewController
             oos.close();
             System.out.println("Object saved");
         } catch (Exception e) {
-            System.out.println("Not saved");;
+            System.out.println("Not saved");
         }
     }
 }

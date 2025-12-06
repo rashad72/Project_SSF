@@ -18,22 +18,22 @@
       </Label>
       <Label layoutX="110.0" layoutY="213.0" text="Operation Summary" />
       <Label layoutX="164.0" layoutY="159.0" text="Mission ID" />
-      <TextField layoutX="238.0" layoutY="155.0" onAction="#podrMissionIdTextField" />
+      <TextField fx:id="podrMissionIdTextField" layoutX="238.0" layoutY="155.0" />
       <TextArea fx:id="podrOperationSummaryTextArea" layoutX="238.0" layoutY="206.0" prefHeight="99.0" prefWidth="271.0" />
-      <TextArea fx:id="podrChallengesTextArea" layoutX="700.0" layoutY="206.0" prefHeight="99.0" prefWidth="271.0" />
-      <Label layoutX="591.0" layoutY="247.0" text="Challenges Areas" />
-      <TextField fx:id="podrDurationTextField" layoutX="708.0" layoutY="155.0" />
-      <Label layoutX="591.0" layoutY="159.0" text="Duration (Hours)" />
+      <TextArea fx:id="podrAdressTextArea" layoutX="700.0" layoutY="206.0" prefHeight="99.0" prefWidth="271.0" />
+      <Label layoutX="635.0" layoutY="256.0" text="Adress" />
+      <TextField fx:id="podrMissionNameTextField" layoutX="708.0" layoutY="155.0" />
+      <Label layoutX="591.0" layoutY="159.0" text="Mission Name" />
       <TableView fx:id="podrTableView" layoutX="95.0" layoutY="426.0" prefHeight="262.0" prefWidth="841.0">
         <columns>
-          <TableColumn prefWidth="92.0" text="Mission ID" />
-          <TableColumn prefWidth="169.0" text="Duration Time (Hours)" />
-            <TableColumn prefWidth="327.0" text="Operation Summary" />
-            <TableColumn prefWidth="256.0" text="Challenges Areas" />
+          <TableColumn fx:id="mIdTC" prefWidth="92.0" text="Mission ID" />
+          <TableColumn fx:id="mnTC" prefWidth="169.0" text="Mission Name" />
+            <TableColumn fx:id="osTC" prefWidth="327.0" text="Operation Summary" />
+            <TableColumn fx:id="adressTC" prefWidth="256.0" text="Adress" />
         </columns>
       </TableView>
-      <Button layoutX="897.0" layoutY="319.0" mnemonicParsing="false" onAction="#podrSubmitButtonOnAction" prefHeight="41.0" prefWidth="54.0" text="Submit" />
-      <Button layoutX="442.0" layoutY="366.0" mnemonicParsing="false" onAction="#podrTableLoadButtonOnAction" prefHeight="41.0" prefWidth="175.0" text="Show In Table" />
+      <Button layoutX="489.0" layoutY="706.0" mnemonicParsing="false" onAction="#podrSubmitButtonOnAction" prefHeight="41.0" prefWidth="54.0" text="Submit" />
+      <Button layoutX="442.0" layoutY="345.0" mnemonicParsing="false" onAction="#podrTableLoadButtonOnAction" prefHeight="41.0" prefWidth="175.0" text="Show In Table" />
       <Button layoutX="868.0" layoutY="706.0" mnemonicParsing="false" onAction="#podrToDashboardButtonOnAction" prefHeight="41.0" prefWidth="75.0" text="Dashboard" />
    </children>
 </AnchorPane>
