@@ -9,7 +9,7 @@ public class Notification implements Serializable {
     private String message;
     private LocalDate date;
     private String priority; // "High", "Medium", "Low"
-    private String status = "UNREAD";   // "READ", "UNREAD"
+    private String status ;   // "READ", "UNREAD"
 
     public Notification(String alertId, String category, String message, LocalDate date, String priority, String status) {
         this.alertId = alertId;
