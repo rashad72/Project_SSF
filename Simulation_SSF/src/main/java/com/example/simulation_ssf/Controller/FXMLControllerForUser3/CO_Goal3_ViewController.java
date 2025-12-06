@@ -93,7 +93,7 @@ public class CO_Goal3_ViewController
         int target = Integer.parseInt(messageIdTF.getText());
         for (Message m2: messageList) {
             if (m2.getMessageId() == target) {
-                m2.setStatus("READ");
+               // m2.setStatus("READ");
 
             }
         }
