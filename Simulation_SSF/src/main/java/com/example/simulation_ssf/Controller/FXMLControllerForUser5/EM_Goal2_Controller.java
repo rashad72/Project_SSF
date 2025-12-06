@@ -11,6 +11,7 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
+import java.io.EOFException;
 import java.util.ArrayList;
 
 public class EM_Goal2_Controller
@@ -50,7 +51,31 @@ public class EM_Goal2_Controller
         statusTC.setCellValueFactory(new PropertyValueFactory<>("status"));
         equimentNameTC.setCellValueFactory(new PropertyValueFactory<>("equipmentName"));
 
+        File file = new File("equipment.bin");
+        if (!file.exists()) {
+            System.out.println("File not found, returning empty list.");
+            return;
+        }
+        try {
+            FileInputStream fis = new FileInputStream(file);
+            ObjectInputStream ois = new ObjectInputStream(fis);
+            while (true){
+                try {
+                    Equipment e1 = (Equipment) ois.readObject();
+                    equipmentList.add(e1);
+                } catch (EOFException e) {
+                    System.out.println("Bin file read!");
+                    break;
+                }
+            }
+        }
+        catch (Exception e) {
+            System.out.println("error");
+        }
+        updateEquipmentTV.getItems().addAll(equipmentList);
 
+
+    }
 
 
 
