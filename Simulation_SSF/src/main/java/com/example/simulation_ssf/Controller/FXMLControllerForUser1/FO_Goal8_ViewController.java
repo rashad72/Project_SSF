@@ -11,7 +11,7 @@ import javafx.stage.Stage;
 public class FO_Goal8_ViewController
 {
     @javafx.fxml.FXML
-    private ComboBox cccCommandUnitComboBBox;
+    private ComboBox<String> cccCommandUnitComboBBox;
     @javafx.fxml.FXML
     private TextField cccMessageTitleTextField;
     @javafx.fxml.FXML
@@ -23,6 +23,7 @@ public class FO_Goal8_ViewController
 
     @javafx.fxml.FXML
     public void initialize() {
+        cccCommandUnitComboBBox.getItems().addAll("HQ Command","Local Command","Vehicle Unit","Communication Room","Emergency Unit","Quick Response Team");
     }
 
     @javafx.fxml.FXML

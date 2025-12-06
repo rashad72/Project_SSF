@@ -24,6 +24,7 @@ public class FO_Goal7_ViewController
 
     @javafx.fxml.FXML
     public void initialize() {
+        raarThreatLevelComboBox.getItems().addAll("Low","Medium","High","Critical");
     }
 
     @javafx.fxml.FXML

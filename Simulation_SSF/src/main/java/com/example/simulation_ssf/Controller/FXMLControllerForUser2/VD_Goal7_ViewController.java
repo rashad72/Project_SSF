@@ -13,7 +13,7 @@ public class VD_Goal7_ViewController
     @javafx.fxml.FXML
     private TextField iarLocationTextField;
     @javafx.fxml.FXML
-    private ComboBox iarIncidentTypeComboBox;
+    private ComboBox<String> iarIncidentTypeComboBox;
     @javafx.fxml.FXML
     private DatePicker iarDatePicker;
     @javafx.fxml.FXML
@@ -21,12 +21,14 @@ public class VD_Goal7_ViewController
     @javafx.fxml.FXML
     private TextArea iarDescriptionTextArea;
     @javafx.fxml.FXML
-    private ComboBox iarFilterIncidentTypeComboBox1;
+    private ComboBox<String> iarFilterIncidentTypeComboBox1;
     @javafx.fxml.FXML
     private DatePicker iarFilterDatePicker1;
 
     @javafx.fxml.FXML
     public void initialize() {
+        iarIncidentTypeComboBox.getItems().addAll("Minor Accident", "Major Accident", "Vehicle Breakdown", "Mechanical Failure", "Road Block", "Environmental Hazard");
+        iarFilterIncidentTypeComboBox1.getItems().addAll("Minor Accident", "Major Accident", "Vehicle Breakdown", "Mechanical Failure", "Road Block", "Environmental Hazard");
     }
 
     @javafx.fxml.FXML

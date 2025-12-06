@@ -15,9 +15,9 @@ public class FO_Goal5_ViewController
     @javafx.fxml.FXML
     private DatePicker erchEventDatePicker;
     @javafx.fxml.FXML
-    private ComboBox erchEergencyTypeComboBox;
+    private ComboBox<String> erchEergencyTypeComboBox;
     @javafx.fxml.FXML
-    private ComboBox erchResponseLevelComboBox;
+    private ComboBox<String> erchResponseLevelComboBox;
     @javafx.fxml.FXML
     private TextField erchLocationTextField;
     @javafx.fxml.FXML
@@ -25,6 +25,8 @@ public class FO_Goal5_ViewController
 
     @javafx.fxml.FXML
     public void initialize() {
+        erchEergencyTypeComboBox.getItems().addAll("Medical","Accident","Fire","Crowd Panic");
+        erchResponseLevelComboBox.getItems().addAll("Immediate", "High", "Medium", "Low");
     }
 
     @javafx.fxml.FXML

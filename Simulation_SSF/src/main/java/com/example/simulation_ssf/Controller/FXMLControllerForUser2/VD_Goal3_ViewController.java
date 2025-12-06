@@ -22,14 +22,16 @@ public class VD_Goal3_ViewController
     @javafx.fxml.FXML
     private DatePicker eertEvaquationDateDatePicker;
     @javafx.fxml.FXML
-    private ComboBox eertEvaquationTypeComboBox;
+    private ComboBox<String> eertEvaquationTypeComboBox;
     @javafx.fxml.FXML
-    private ComboBox eertEvaquationTypeFilterComboBox1;
+    private ComboBox<String> eertEvaquationTypeFilterComboBox1;
     @javafx.fxml.FXML
     private DatePicker eertEvaquationDateFilterDatePicker1;
 
     @javafx.fxml.FXML
     public void initialize() {
+        eertEvaquationTypeFilterComboBox1.getItems().addAll("Medical","Fire","Rescue","Accident", "General Evacuation");
+        eertEvaquationTypeComboBox.getItems().addAll("Medical","Fire","Rescue","Accident", "General Evacuation");
     }
 
     @javafx.fxml.FXML

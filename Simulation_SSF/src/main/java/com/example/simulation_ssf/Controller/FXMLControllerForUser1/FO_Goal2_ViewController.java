@@ -24,7 +24,7 @@ public class FO_Goal2_ViewController
     @javafx.fxml.FXML
     private TextArea fICRThreatDescriptionTextField;
     @javafx.fxml.FXML
-    private ComboBox fICRSeverityLevelComboBox;
+    private ComboBox<String> fICRSeverityLevelComboBox;
 
     @javafx.fxml.FXML
     public void initialize() {

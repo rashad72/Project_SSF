@@ -14,18 +14,20 @@ import javafx.stage.Stage;
 public class FO_Goal3_ViewController
 {
     @javafx.fxml.FXML
-    private ComboBox mufeComboBox;
+    private ComboBox<String> mufeComboBox;
     @javafx.fxml.FXML
     private TableView mufeTableView;
     @javafx.fxml.FXML
     private TextField mufeEquipementIdTextField;
     @javafx.fxml.FXML
-    private ComboBox mufeStatusComboBox;
+    private ComboBox<String> mufeStatusComboBox;
     @javafx.fxml.FXML
     private DatePicker mufeLastMaintenanceDP;
 
     @javafx.fxml.FXML
     public void initialize() {
+        mufeComboBox.getItems().addAll("Weapon","Handheld Camera", "Flashlight", "GPS Device", "First Aid Kit", "Protective Vest","Tactical Gear");
+        mufeStatusComboBox.getItems().addAll("Working", "Need Maintainance", "Damaged", "Replaced");
     }
 
     @javafx.fxml.FXML

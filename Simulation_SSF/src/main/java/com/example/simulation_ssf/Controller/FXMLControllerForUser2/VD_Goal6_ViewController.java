@@ -18,7 +18,7 @@ public class VD_Goal6_ViewController
     @javafx.fxml.FXML
     private TableView fulsTableView;
     @javafx.fxml.FXML
-    private ComboBox fulsFuelStationComboBox;
+    private ComboBox<String> fulsFuelStationComboBox;
     @javafx.fxml.FXML
     private TextField fulsVehicleIdTextField;
     @javafx.fxml.FXML
@@ -30,10 +30,12 @@ public class VD_Goal6_ViewController
     @javafx.fxml.FXML
     private DatePicker fulsFilterRefuelDatePicker1;
     @javafx.fxml.FXML
-    private ComboBox fulsFilterFuelStationComboBox1;
+    private ComboBox<String> fulsFilterFuelStationComboBox1;
 
     @javafx.fxml.FXML
     public void initialize() {
+        fulsFuelStationComboBox.getItems().addAll("Padma Fuel Station","Meghna Fuel Station" ,"Internal SSF Station" ,"City Fuel Hub" ,"Highway Fuel Depot");
+        fulsFilterFuelStationComboBox1.getItems().addAll("Padma Fuel Station","Meghna Fuel Station" ,"Internal SSF Station" ,"City Fuel Hub" ,"Highway Fuel Depot");
     }
 
     @javafx.fxml.FXML
